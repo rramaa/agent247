@@ -6,6 +6,10 @@ const commonOptions = [{
 }]
 
 const options = {
+  [STEPS["INTRO"]]: {
+    type: 'intro',
+    nextStep: STEPS["STEP_1"]
+  },
   [STEPS["STEP_1"]]: [
     ...commonOptions,
     {

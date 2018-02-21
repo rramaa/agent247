@@ -70,6 +70,9 @@ class MainContent extends Component {
   }
   render() {
     let allOptions = {...displayFields[this.props.step]}
+    if (allOptions.type === 'intro') {
+      return null
+    }
     let content;
     if(allOptions.type === 'map'){
       setTimeout(() => {

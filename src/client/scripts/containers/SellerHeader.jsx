@@ -1,10 +1,14 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import cs from 'classnames'
+import STEPS from 'scripts/services/config/steps'
 
 
 class SellerHeader extends Component {
   render() {
+    if (STEPS['INTRO'] === this.props.step) {
+      return null
+    }
     const cls = cs("sllr-head", {
       speak: this.props.speaking
     })
@@ -23,7 +27,8 @@ class SellerHeader extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    speaking: state.speaking
+    speaking: state.speaking,
+    step: state.step
   }
 }
 
