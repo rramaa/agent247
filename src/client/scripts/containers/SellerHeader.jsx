@@ -32,6 +32,7 @@ class SellerHeader extends Component {
     return (
         <div className="sllr-info-wrap">
           <div className={cls}>
+            <i className="fa fa-arrow-left"></i>
             <i
               className={volumeCls}
               onClick={this.toggleVolume}

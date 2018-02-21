@@ -109,6 +109,20 @@ body {
 	background: #333;
 	color: #fff;
 
+	.fa-arrow-left {
+		position: absolute;
+		top: 10px;
+		left: 0px;
+		z-index: 3;
+		width: 40px;
+		height: 40px;
+		padding: 12px 0 0 0;
+		color: #fff;
+		font-size: 18px;
+		content: 'back';
+		opacity: 0;
+	}
+
 	[class*='fa-volume-'] {
 		position: absolute;
 		top: 10px;
