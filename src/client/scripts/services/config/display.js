@@ -58,6 +58,22 @@ const options = {
     },{
       displayText: 'Tell me which ones you like',
       id: 2
+    }, {
+      type: 'similar',
+      data: [{
+        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
+        title: '4 BHK Apartment',
+        location: 'DLF Park Place',
+        locality: 'Sector 54, Gurgaon',
+        price: '85,000'
+      }, {
+        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
+        title: '4 BHK Apartment',
+        location: 'DLF Park Place',
+        locality: 'Sector 54, Gurgaon',
+        price: '85,000'
+      }],
+      id: 3
     }]
   },
   [STEPS["STEP_5"]]: {
