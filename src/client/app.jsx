@@ -4,6 +4,8 @@ import localStorageService from "scripts/services/localStorageService"
 import style from "style/style"
 import configureStore from 'scripts/services/store'
 import { Provider, connect } from 'react-redux'
+import InputOptions from 'scripts/containers/InputOptions'
+import MainContent from 'scripts/containers/MainContent'
 
 let store = configureStore()
 
@@ -15,7 +17,8 @@ class ToDo extends Component {
     render() {
         return (
             <div>
-                "Hello World"
+                <MainContent />
+                <InputOptions />
             </div>
         )
     }

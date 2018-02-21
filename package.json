@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "classnames": "^2.2.5",
     "react": "^16.0.0",
+    "react-auto-bind": "^0.4.2",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
