@@ -38,7 +38,7 @@ class MapBox extends Component{
 	render(){
 		return (
 			<div id="mapWrap">
-				<div id="map" style={{width:'600px', height:'400px'}}></div>
+				<div id="map" className="" style={{width:'calc(100% + 20px)', height:'200px', marginLeft:'-10px'}}></div>
 				<div id="scriptArea"></div>
 			</div>
 		)
