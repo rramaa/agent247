@@ -21,6 +21,11 @@ class Intro extends Component {
 
         <div className="progress-wrap ta-c">
           <div className="txt">Initializing...</div>
+          <div className="progress-container">
+            <div className="progress progress-striped active">
+              <div className="bar"></div>
+            </div>
+          </div>
         </div>
 
         <div className="logo"></div>

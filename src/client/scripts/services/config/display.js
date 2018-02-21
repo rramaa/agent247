@@ -23,7 +23,7 @@ const options = {
       },
       id: 3
     }, {
-      displayText: 'How may I further assist you today Mark?',
+      displayText: 'How may I further assist you today?',
       id: 4
     }]
   },
