@@ -5,7 +5,7 @@ import Button from 'scripts/components/Button'
 import Intro from 'scripts/components/Intro'
 import autobind from 'react-auto-bind'
 
-const INTRO_TIMER = 99999
+const INTRO_TIMER = 5000
 
 function changeStep(dispatch, step) {
   dispatch({
