@@ -7,7 +7,7 @@ const CATEGORY_KEY = "category"
 
 export function getInitialState(){
 	const newState = {
-		step: STEPS["STEP_1"],
+		step: STEPS["INTRO"],
 		showOptions: false
 	}
 	return newState

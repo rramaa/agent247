@@ -1,6 +1,9 @@
 import STEPS from 'scripts/services/config/steps'
 
 const options = {
+  [STEPS["INTRO"]]: {
+    type: 'intro'
+  },
   [STEPS["STEP_1"]]: {
     type: 'text',
     options: [{
