@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class PropertyCard extends Component {
+class SimilarCard extends Component {
   render (){
     return (
       <div className="card">
@@ -12,7 +12,10 @@ class PropertyCard extends Component {
             <div className="price">&#8377; {this.props.price}</div>
             </div>
         </div>
-      </div>
+        <div className="btn-wrap flexrow">
+
+        </div>
+    </div>
     )
   }
 }

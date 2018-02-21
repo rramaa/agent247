@@ -14,6 +14,12 @@ body {
 	margin-bottom: 10px;
 }
 
+.flexrow {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
 // Gradient Animation
 @keyframes Gradient {
 	0% {
@@ -138,6 +144,21 @@ body {
 	color: #666;
 	font-size: 12px;
 
+	.img-wrap {
+		width: 70px;
+		height: 70px;
+		margin-right: 10px;
+		border-radius: 2px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: #ccc;
+		background-size: cover;
+	}
+
+	.prop-content {
+
+	}
+
 	.title {
 		color: #333;
 		font-size: 15px;
@@ -154,26 +175,20 @@ body {
 		font-size: 15px;
 		font-weight: 500;
 	}
+
+	.btn-wrap {
+		
+	}
 }
 .propcard {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
 
-	.img-wrap {
-		width: 70px;
-		height: 70px;
-		margin-right: 10px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: #ccc;
-		background-size: cover;
-	}
-
-	.prop-content {
-
-	}
+	
 }
+
+.with-options {
+	
+}
+
 /* GENERIC CARD ENDS */
 
 /* OPTIONS CSS STARTS */
