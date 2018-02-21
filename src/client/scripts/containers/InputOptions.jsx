@@ -2,7 +2,10 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import options from "scripts/services/config/options"
 import Button from 'scripts/components/Button'
+import Intro from 'scripts/components/Intro'
 import autobind from 'react-auto-bind'
+
+const INTRO_TIMER = 2000
 
 function changeStep(dispatch, step) {
   dispatch({
@@ -22,10 +25,19 @@ class InputOptions extends Component {
     }
   }
   render() {
+    let opt = options[this.props.step]
+    if (opt.type === 'intro') {
+      setTimeout(() => {
+        changeStep(this.props.dispatch, opt.nextStep)
+      }, INTRO_TIMER);
+      return (
+        <Intro />
+      )
+    }
     if(!this.props.showOptions) {
       return null
     }
-    const opt = ([...options[this.props.step]]).map(v => ({...v}))
+    opt = opt.map(v => ({ ...v }))
     return (
       <div className='options-wrap'>
       {opt.map(v => {
