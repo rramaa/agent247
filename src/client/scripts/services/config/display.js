@@ -23,7 +23,8 @@ const options = {
         location: 'DLF Park Place',
         locality: 'Sector 54, Gurgaon',
         price: '85,000'
-      }
+      },
+      id: 4
     }]
   },
   [STEPS["STEP_2"]]: {
@@ -92,15 +93,15 @@ const options = {
   [STEPS["STEP_8"]]: {
     type: 'text',
     options: [{
-      displayText: 'Hi, sorry I couldn’t pick your call.',
+      displayText: 'Thanks, I have created a property schedule for you below.',
       id: 1
     }, {
-      displayText: 'I saw that you have shown interest for rent in DLF Park Place',
+      displayText: 'It should take around 2 hours for the tour.',
       id: 2
     }, {
       type: 'map'
     }, {
-      displayText: 'Ho gaya khush?',
+      displayText: 'Please confirm if it sounds good?',
       id: 3
     }, ]
   },

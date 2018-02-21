@@ -36,7 +36,6 @@ const options = {
     }
   ],
   [STEPS["STEP_2"]]: [
-    ...commonOptions,
     {
       displayText: 'Any other similar properties nearby?',
       nextStep: STEPS["STEP_3"]
@@ -47,7 +46,6 @@ const options = {
     }
   ],
   [STEPS["STEP_3"]]: [
-    ...commonOptions,
     {
       displayText: 'I can go upto 1Lac if required.',
       nextStep: STEPS["STEP_4"]
@@ -56,7 +54,6 @@ const options = {
     }
   ],
   [STEPS["STEP_4"]]: [
-    ...commonOptions,
     {
       displayText: 'Pikachu, I choose you.',
       nextStep: STEPS["STEP_5"]
@@ -65,7 +62,6 @@ const options = {
     }
   ],
   [STEPS["STEP_5"]]: [
-    ...commonOptions,
     {
       displayText: 'Yes definitely',
       nextStep: STEPS["STEP_6"]
@@ -74,7 +70,6 @@ const options = {
     }
   ],
   [STEPS["STEP_6"]]: [
-    ...commonOptions,
     {
       displayText: 'Saturday afternoon',
       nextStep: STEPS["STEP_8"]
@@ -85,7 +80,6 @@ const options = {
     }
   ],
   [STEPS["STEP_7"]]: [
-    ...commonOptions,
     {
       displayText: 'Seems that I am lost, show me da wey?',
       nextStep: STEPS["STEP_1"]
@@ -94,7 +88,6 @@ const options = {
     }
   ],
   [STEPS["STEP_8"]]: [
-    ...commonOptions,
     {
       displayText: 'Yes definitely.',
       nextStep: STEPS["STEP_10"]
@@ -103,7 +96,6 @@ const options = {
     }
   ],
   [STEPS["STEP_9"]]: [
-    ...commonOptions,
     {
       displayText: 'Seems that I am lost, show me da wey?',
       nextStep: STEPS["STEP_1"]
@@ -112,14 +104,12 @@ const options = {
     }
   ],
   [STEPS["STEP_10"]]: [
-    ...commonOptions,
     {
       displayText: 'Thanks, bye!',
       nextStep: STEPS["STEP_11"]
     }
   ],
   [STEPS["STEP_11"]]: [
-    ...commonOptions,
     {
       displayText: 'Is it a fantasy?'
     }

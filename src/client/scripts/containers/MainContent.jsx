@@ -60,7 +60,7 @@ class MainContent extends Component {
     lastElem.className = cs(lastElem.className, 'current')
     if(!lastElem.type){
       const speech = talkToMe(lastElem.displayText)
-      speech.onend = this.onSpeechEnd
+      speech.onend = ()=>{setTimeout(this.onSpeechEnd, 1000)} //DELAY BETWEEN TEXTS
       changeSpeakingState(this.props.dispatch, true)
       speechSynthesis.speak(speech)
     } else {
