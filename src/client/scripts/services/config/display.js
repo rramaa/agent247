@@ -126,11 +126,21 @@ const options = {
   [STEPS["STEP_9"]]: {
     type: 'text',
     options: [{
-      displayText: 'UNCHARTED TERRITORY! HOW DID YOU FIND ME?',
+      displayText: 'We also provide a complimentary pick up service from your location.',
       id: 1
+    }, {
+      displayText: 'If you like, you can tell me pick-up point',
+      id: 2
     }]
   },
   [STEPS["STEP_10"]]: {
+    type: 'text',
+    options: [{
+      displayText: 'Location input',
+      id: 1
+    }]
+  },
+  [STEPS["STEP_11"]]: {
     type: 'text',
     options: [{
       displayText: 'It was great talking to you Mark.',
@@ -138,13 +148,6 @@ const options = {
     }, {
       displayText: 'Looking forward!',
       id: 2
-    }]
-  },
-  [STEPS["STEP_11"]]: {
-    type: 'text',
-    options: [{
-      displayText: 'Is this the real life?',
-      id: 1
     }]
   }
 }

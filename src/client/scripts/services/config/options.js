@@ -90,28 +90,28 @@ const options = {
   [STEPS["STEP_8"]]: [
     {
       displayText: 'Yes definitely.',
-      nextStep: STEPS["STEP_10"]
+      nextStep: STEPS["STEP_9"]
     }, {
       displayText: 'Let me get back to you soon.'
     }
   ],
   [STEPS["STEP_9"]]: [
     {
-      displayText: 'Seems that I am lost, show me da wey?',
-      nextStep: STEPS["STEP_1"]
+      displayText: 'Enter location',
+      nextStep: STEPS["STEP_10"]
     }, {
-      displayText: 'NO.'
+      displayText: 'No, I will come on my own'
     }
   ],
   [STEPS["STEP_10"]]: [
     {
-      displayText: 'Thanks, bye!',
+      displayText: 'This is a location',
       nextStep: STEPS["STEP_11"]
     }
   ],
   [STEPS["STEP_11"]]: [
     {
-      displayText: 'Is it a fantasy?'
+      displayText: 'Thanks, bye!'
     }
   ]
 }
