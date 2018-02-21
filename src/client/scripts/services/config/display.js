@@ -7,13 +7,13 @@ const options = {
   [STEPS["STEP_1"]]: {
     type: 'text',
     options: [{
-      displayText: 'Hi, sorry I couldn’t pick your call.',
+      displayText: 'Hi Mark, sorry I couldn’t pick your call.',
       id: 1
     }, {
       displayText: 'I saw that you have shown interest for rent in DLF Park Place',
       id: 2
     }, {
-      displayText: 'How may I further assist you today Mark?',
+      displayText: 'How may I further assist you today?',
       id: 3
     }, {
       type: 'property-card',
