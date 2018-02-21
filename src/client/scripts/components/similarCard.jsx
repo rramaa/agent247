@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import autobind from 'react-auto-bind'
 class SimilarCard extends Component {
   render (){
     return (
@@ -14,11 +14,34 @@ class SimilarCard extends Component {
         </div>
         <div className="btn-wrap flexrow">
             <span className="btn"><i className="fa fa-thumbs-down"></i> Nopes</span>
-            <span className="btn"><i className="fa fa-heart-o"></i> Like</span>
+            <span className="btn" onClick={this.props.onClick}><i className="fa fa-heart-o"></i> Like</span>
         </div>
     </div>
     )
   }
 }
 
-export default PropertyCard
+class SimilarCardList extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            current: 1
+        }
+        autobind(this)
+    }
+    onClick() {
+        this.setState((prevState) => {
+            const next = this.props.data.length === prevState.current ? this.props.data.length : prevState.current + 1
+            return {
+                ...prevState,
+                current: next
+            }
+        })
+    }
+    render() {
+        const current = this.props.data[this.state.current - 1]
+        return (<SimilarCard {...current} onClick={this.onClick} />)
+    }
+}
+
+export default SimilarCardList

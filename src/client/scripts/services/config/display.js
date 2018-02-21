@@ -12,7 +12,7 @@ const options = {
     }, {
       displayText: 'I saw that you have shown interest for rent in DLF Park Place',
       id: 2
-    },{
+    }, {
       type: 'property-card',
       data: {
         imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
@@ -21,10 +21,10 @@ const options = {
         locality: 'Sector 54, Gurgaon',
         price: '85,000'
       },
-      id: 4
+      id: 3
     }, {
       displayText: 'How may I further assist you today?',
-      id: 3
+      id: 4
     }]
   },
   [STEPS["STEP_2"]]: {
@@ -58,6 +58,22 @@ const options = {
     },{
       displayText: 'Tell me which ones you like',
       id: 2
+    }, {
+      type: 'similar',
+      data: [{
+        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
+        title: '4 BHK Apartment',
+        location: 'DLF Park Place',
+        locality: 'Sector 54, Gurgaon',
+        price: '85,000'
+      }, {
+        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
+        title: '4 BHK Apartment',
+        location: 'DLF Park Place',
+        locality: 'Sector 54, Gurgaon',
+        price: '85,000'
+      }],
+      id: 3
     }]
   },
   [STEPS["STEP_5"]]: {
@@ -110,11 +126,21 @@ const options = {
   [STEPS["STEP_9"]]: {
     type: 'text',
     options: [{
-      displayText: 'UNCHARTED TERRITORY! HOW DID YOU FIND ME?',
+      displayText: 'We also provide a complimentary pick up service from your location.',
       id: 1
+    }, {
+      displayText: 'If you like, you can tell me pick-up point',
+      id: 2
     }]
   },
   [STEPS["STEP_10"]]: {
+    type: 'text',
+    options: [{
+      displayText: 'Location input',
+      id: 1
+    }]
+  },
+  [STEPS["STEP_11"]]: {
     type: 'text',
     options: [{
       displayText: 'It was great talking to you Mark.',
@@ -122,13 +148,6 @@ const options = {
     }, {
       displayText: 'Looking forward!',
       id: 2
-    }]
-  },
-  [STEPS["STEP_11"]]: {
-    type: 'text',
-    options: [{
-      displayText: 'Is this the real life?',
-      id: 1
     }]
   }
 }
