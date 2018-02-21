@@ -3,13 +3,17 @@ import STEPS from 'scripts/services/config/steps'
 const options = {
   [STEPS["STEP_1"]]: [
     {
-      displayText: 'Hey Mark, whats up?'
+      displayText: 'Hey Mark, whats up?',
+      id: 1
     }, {
-      displayText: 'Hey man, whats up?'
+      displayText: 'Hey man, whats up?',
+      id: 2
     }, {
-      displayText: 'good good'
+      displayText: 'good good',
+      id: 3
     }, {
-      displayText: 'Hey Mark, whats up?'
+      displayText: 'Hey Mark, whats up?',
+      id: 4
     }
   ],
   [STEPS["STEP_2"]]: [

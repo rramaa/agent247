@@ -22,7 +22,7 @@ class InputOptions extends Component {
     }
   }
   render() {
-    const opt = options[this.props.step]
+    const opt = ([...options[this.props.step]]).map(v => ({...v}))
     return (
       opt.map(v => {
         return (

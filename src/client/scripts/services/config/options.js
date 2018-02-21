@@ -1,7 +1,8 @@
 import STEPS from 'scripts/services/config/steps'
 
 const commonOptions = [{
-  displayText: "Common option"
+  displayText: "Common option",
+  nextStep: STEPS["STEP_1"]
 }]
 
 const options = {
