@@ -70,6 +70,9 @@ class MainContent extends Component {
   }
   render() {
     let allOptions = {...displayFields[this.props.step]}
+    if (allOptions.type === 'intro') {
+      return null
+    }
     let content;
       const opt = this.getRenderedOptions(allOptions.options)
       content = opt.map(v => {

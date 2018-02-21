@@ -24,9 +24,14 @@ class MapBox extends Component{
 			origin: 'Halifax, NS',
 			destination: 'Vancouver, BC'
 		});
-		var mapScript = document.createElement('script');
+		var mapScript = document.getElementById('map-script')
+		if (mapScript) {
+			return calculateAndDisplayRoute()
+		}
+		mapScript = document.createElement('script');
 		mapScript.async = true;
 		mapScript.defer = true;
+		mapScript.setAttribute('id', 'map-script')
 		mapScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCM65ffwx1b7S_WBQsd3mhgk8n4UDO1INM&callback=initMap'
 		document.getElementById('scriptArea').appendChild(mapScript);
 	}
@@ -38,7 +43,7 @@ class MapBox extends Component{
 	render(){
 		return (
 			<div id="mapWrap">
-				<div id="map" style={{width:'600px', height:'400px'}}></div>
+				<div id="map" className="" style={{width:'calc(100% + 20px)', height:'200px', marginLeft:'-10px'}}></div>
 				<div id="scriptArea"></div>
 			</div>
 		)

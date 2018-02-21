@@ -1,5 +1,5 @@
 export default {
-  STEP_0: "Step 0",
+  INTRO: "Intro",
   STEP_1: "Step 1",
   STEP_2: "Step 2",
   STEP_3: "Step 3",

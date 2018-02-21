@@ -1,6 +1,9 @@
 import STEPS from 'scripts/services/config/steps'
 
 const options = {
+  [STEPS["INTRO"]]: {
+    type: 'intro'
+  },
   [STEPS["STEP_1"]]: {
     type: 'text',
     options: [{
@@ -15,9 +18,11 @@ const options = {
     }, {
       type: 'property-card',
       data: {
+        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
         title: '4 BHK Apartment',
         location: 'DLF Park Place',
-        locality: 'Sector 54, Gurgaon'
+        locality: 'Sector 54, Gurgaon',
+        price: '85,000'
       }
     }]
   },
