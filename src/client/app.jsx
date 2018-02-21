@@ -14,8 +14,28 @@ class ToDo extends Component {
 
     render() {
         return (
-            <div>
-                "Hello World"
+            <div className="body-container">
+
+                {/* here goes the seller information */}
+                <div class="sllr-info-wrap">
+                    <div className="sllr-head speak">
+                        <i className="fa fa-volume-off"></i>
+                        <div className="sllr-img-wrap"></div>
+                    </div>
+                    <div className="sllr-name">John Mathewz</div>
+                    <div className="sllr-loc">Rai Realtors, Gurgaon</div>
+                </div>
+
+                {/* here goes the seller information */}
+                <div className="sllr-statement-wrap">
+                    <div className="statement">Hi Mark, Sorry couldn't pick up your call.</div>
+                    <div className="statement">I saw that you have shown interest for rent in DLF Park Place.</div>
+                    <div className="statement">
+                        <div className="card propcard">
+                            <div><span className="title">4 BHK Apartment</span> in DLF Park Place</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
