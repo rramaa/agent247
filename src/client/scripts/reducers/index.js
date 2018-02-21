@@ -8,7 +8,8 @@ const CATEGORY_KEY = "category"
 export function getInitialState(){
 	const newState = {
 		step: STEPS["INTRO"],
-		showOptions: false
+		showOptions: false,
+		mute: true
 	}
 	return newState
 }
@@ -34,6 +35,12 @@ export default function rootReducer(state={}, {type, payload}){
 			newState = {
 				...state,
 				speaking: payload
+			}
+			break;
+		case 'TOGGLE_VOLUME':
+			newState = {
+				...state,
+				mute: !state.mute
 			}
 			break;
 		default:

@@ -12,10 +12,7 @@ const options = {
     }, {
       displayText: 'I saw that you have shown interest for rent in DLF Park Place',
       id: 2
-    }, {
-      displayText: 'How may I further assist you today Mark?',
-      id: 3
-    }, {
+    },{
       type: 'property-card',
       data: {
         imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
@@ -25,6 +22,9 @@ const options = {
         price: '85,000'
       },
       id: 4
+    }, {
+      displayText: 'How may I further assist you today Mark?',
+      id: 3
     }]
   },
   [STEPS["STEP_2"]]: {
@@ -103,7 +103,7 @@ const options = {
     }, {
       displayText: 'Please confirm if it sounds good?',
       id: 3
-    }, ]
+    }]
   },
   [STEPS["STEP_9"]]: {
     type: 'text',

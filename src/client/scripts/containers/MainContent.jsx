@@ -8,6 +8,9 @@ import {talkToMe} from 'scripts/services/utilService'
 import MapBox from 'scripts/components/MapBox'
 import PropertyCard from 'scripts/components/PropertyCard'
 
+const SPEECH_DELAY = 100
+const OPTIONS_DELAY = 150
+
 function showOptions(dispatch) {
   dispatch({
     type: 'SHOW_OPTIONS',
@@ -28,27 +31,42 @@ class MainContent extends Component {
     this.state = {
       display: 0
     }
+    this.mute = this.props.mute
   }
   onSpeechEnd() {
     changeSpeakingState(this.props.dispatch, false)
     const {options: opt} = {...displayFields[this.props.step]}
     const { display } = this.state
     if (opt.length - 1 === display) {
-      showOptions(this.props.dispatch)
+      setTimeout(() => {
+        showOptions(this.props.dispatch)
+      }, OPTIONS_DELAY);
       return
     }
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        display: prevState.display + 1
-      }
-    })
+    setTimeout(() => {
+      this.setState((prevState) => {
+        return {
+          ...prevState,
+          display: prevState.display + 1
+        }
+      })
+    }, SPEECH_DELAY);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if(nextProps.mute !== this.props.mute){
+      this.mute = nextProps.mute
+      return false
+    }
+    return true
   }
 
   componentWillReceiveProps() {
     this.setState({ display: 0 })
   }
+  
   getRenderedOptions(opt) {
+    const {mute} = this
     const { display } = this.state
     opt = opt.filter((v, i) => {
       return i <= display
@@ -58,9 +76,9 @@ class MainContent extends Component {
     }
     const lastElem = opt[opt.length - 1]
     lastElem.className = cs(lastElem.className, 'current')
-    if(!lastElem.type){
+    if(!lastElem.type && !mute){
       const speech = talkToMe(lastElem.displayText)
-      speech.onend = ()=>{setTimeout(this.onSpeechEnd, 1000)} //DELAY BETWEEN TEXTS
+      speech.onend = this.onSpeechEnd
       changeSpeakingState(this.props.dispatch, true)
       speechSynthesis.speak(speech)
     } else {
@@ -100,7 +118,8 @@ class MainContent extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    step: state.step
+    step: state.step,
+    mute: state.mute
   }
 }
 

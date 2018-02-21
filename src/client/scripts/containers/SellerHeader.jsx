@@ -2,20 +2,40 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import cs from 'classnames'
 import STEPS from 'scripts/services/config/steps'
+import autobind from 'react-auto-bind'
 
+function toggleVolume(dispatch) {
+  dispatch({
+    type: 'TOGGLE_VOLUME'
+  })
+}
 
 class SellerHeader extends Component {
+  constructor(props){
+    super(props)
+    autobind(this)
+  }
+  toggleVolume() {
+    toggleVolume(this.props.dispatch)
+  }
   render() {
     if (STEPS['INTRO'] === this.props.step) {
       return null
     }
     const cls = cs("sllr-head", {
-      speak: this.props.speaking
+      speak: this.props.speaking && !this.props.mute,
+    })
+    const volumeCls = cs('fa', {
+      'fa-volume-up': !this.props.mute,
+      'fa-volume-off': this.props.mute,
     })
     return (
         <div className="sllr-info-wrap">
           <div className={cls}>
-            <i className="fa fa-volume-up"></i>
+            <i
+              className={volumeCls}
+              onClick={this.toggleVolume}
+            ></i>
             <div className="sllr-img-wrap"></div>
           </div>
           <div className="sllr-name">John Mathewz</div>
@@ -28,7 +48,8 @@ class SellerHeader extends Component {
 const mapStateToProps = (state) => {
   return {
     speaking: state.speaking,
-    step: state.step
+    step: state.step,
+    mute: state.mute
   }
 }
 
