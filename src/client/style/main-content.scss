@@ -14,6 +14,36 @@ body {
 	margin-bottom: 10px;
 }
 
+.ta-c {
+	text-align: center;
+}
+
+.ta-l {
+	text-align: left;
+}
+
+.ta-r {
+	text-align: right;
+}
+
+.flexrow {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+// fade In Animation
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+// slide Up Animation
+@keyframes slideup {
+    from { transform: translateY(150px); }
+    to   { transform: translateY(0); }
+}
+
 // Gradient Animation
 @keyframes Gradient {
 	0% {
@@ -65,7 +95,7 @@ body {
 
 	[class*='fa-volume-'] {
 		position: absolute;
-		top: 5px;
+		top: 10px;
 		right: 0px;
 		z-index: 3;
 		width: 40px;
@@ -81,6 +111,11 @@ body {
 		-webkit-animation: Gradient 5s ease infinite;
 		-moz-animation: Gradient 5s ease infinite;
 		animation: Gradient 5s ease infinite;
+	}
+
+	&.intro {
+		margin-top: 20px;
+		background-color: transparent;
 	}
 }
 
@@ -125,6 +160,7 @@ body {
 
 	.statement {
 		padding-bottom: 20px;
+		animation: fadein 2s;
 	}
 }
 /* SELLER STATEMENTS ENDS */
@@ -137,6 +173,21 @@ body {
 	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
 	color: #666;
 	font-size: 12px;
+
+	.img-wrap {
+		width: 85px;
+		height: 70px;
+		margin-right: 10px;
+		border-radius: 2px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: #ccc;
+		background-size: cover;
+	}
+
+	.prop-content {
+
+	}
 
 	.title {
 		color: #333;
@@ -154,36 +205,34 @@ body {
 		font-size: 15px;
 		font-weight: 500;
 	}
+
+	.btn-wrap {
+		justify-content: space-between;
+
+		.btn {
+			margin: 0 10px 10px 0;
+		}
+	}
 }
 .propcard {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
 
-	.img-wrap {
-		width: 70px;
-		height: 70px;
-		margin-right: 10px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: #ccc;
-		background-size: cover;
-	}
+	
+}
 
-	.prop-content {
+.with-options {
 
-	}
 }
 /* GENERIC CARD ENDS */
 
 /* OPTIONS CSS STARTS */
 .options-wrap {
 	position: fixed;
-	bottom: 0;
+	bottom: 0px;
 	left: 0;
 	right: 0;
 	max-height: 150px;
 	padding: 10px;
+	animation: slideup 1s;
 }
 .btn {
 	padding: 8px 20px;
@@ -193,9 +242,6 @@ body {
 	color: #fff;
 	font-size: 14px;
 	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
-	animation-name: bounce;
-    animation-duration: 4s;
-	animation-iteration-count: 1;
 	
 	&.btn-s {
 		background-color: #f06191;
@@ -207,4 +253,30 @@ body {
 // Map Wrap Starts
 #mapWrap {
 	
+}
+
+/* Footer Starts */
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 30vh;
+	width: 100%;
+	background-image: url(https://github.com/rramaa/agent247/blob/UX-changes/src/client/images/footer.png?raw=true);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #fff;
+	background-size: contain;
+}
+.logo {
+
+}
+/* Footer Ends */
+
+
+/*  Intro Screen */
+.progress-wrap {
+	.txt {
+		color: $link2;
+	}
 }

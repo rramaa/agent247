@@ -7,12 +7,12 @@ const options = {
   [STEPS["STEP_1"]]: {
     type: 'text',
     options: [{
-      displayText: 'Hi, sorry I couldn’t pick your call.',
+      displayText: 'Hi Mark, sorry I couldn’t pick your call.',
       id: 1
     }, {
       displayText: 'I saw that you have shown interest for rent in DLF Park Place',
       id: 2
-    },{
+    }, {
       type: 'property-card',
       data: {
         imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
@@ -21,10 +21,10 @@ const options = {
         locality: 'Sector 54, Gurgaon',
         price: '85,000'
       },
-      id: 4
+      id: 3
     }, {
       displayText: 'How may I further assist you today Mark?',
-      id: 3
+      id: 4
     }]
   },
   [STEPS["STEP_2"]]: {
