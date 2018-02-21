@@ -7,7 +7,8 @@ const CATEGORY_KEY = "category"
 
 export function getInitialState(){
 	const newState = {
-		step: STEPS["STEP_1"]
+		step: STEPS["STEP_1"],
+		showOptions: false
 	}
 	return newState
 }
@@ -19,13 +20,19 @@ export default function rootReducer(state={}, {type, payload}){
 		case 'CHANGE_STEP':
 			newState = {
 				...state,
-				step: payload
+				step: payload,
+				showOptions: false
+			}
+			break;
+		case 'SHOW_OPTIONS':
+			newState = {
+				...state,
+				showOptions: payload
 			}
 			break;
 		default:
 			newState = {
-				...state,
-				step
+				...state
 			}
 	}
 	return newState

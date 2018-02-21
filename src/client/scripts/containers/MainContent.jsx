@@ -6,6 +6,12 @@ import autobind from 'react-auto-bind'
 import cs from 'classnames'
 import {talkToMe} from 'scripts/services/utilService'
 
+function showOptions(dispatch) {
+  dispatch({
+    type: 'SHOW_OPTIONS',
+    payload: true
+  })
+}
 class MainContent extends Component {
   constructor(props) {
     super(props)
@@ -18,6 +24,7 @@ class MainContent extends Component {
     const opt = [...displayFields[this.props.step]]
     const { display } = this.state
     if (opt.length - 1 === display) {
+      showOptions(this.props.dispatch)
       return
     }
     this.setState((prevState) => {
@@ -27,9 +34,7 @@ class MainContent extends Component {
       }
     })
   }
-  onClick(data) {
-    console.log(data)
-  }
+
   componentWillReceiveProps() {
     this.setState({ display: 0 })
   }
@@ -53,7 +58,7 @@ class MainContent extends Component {
     const opt = this.getRenderedOptions(opt)
     return opt.map(v => {
       return (
-        <p className={v.className}>
+        <p className={v.className} key={v.id}>
           {v.displayText}
         </p>)
     })

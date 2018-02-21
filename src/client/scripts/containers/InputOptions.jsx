@@ -22,6 +22,9 @@ class InputOptions extends Component {
     }
   }
   render() {
+    if(!this.props.showOptions) {
+      return null
+    }
     const opt = ([...options[this.props.step]]).map(v => ({...v}))
     return (
       opt.map(v => {
@@ -41,7 +44,8 @@ class InputOptions extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    step: state.step
+    step: state.step,
+    showOptions: state.showOptions
   }
 }
 
