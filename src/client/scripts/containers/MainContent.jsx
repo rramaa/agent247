@@ -60,7 +60,7 @@ class MainContent extends Component {
     lastElem.className = cs(lastElem.className, 'current')
     if(!lastElem.type){
       const speech = talkToMe(lastElem.displayText)
-      speech.onend = this.onSpeechEnd
+      speech.onend = ()=>{setTimeout(this.onSpeechEnd, 1000)} //DELAY BETWEEN TEXTS
       changeSpeakingState(this.props.dispatch, true)
       speechSynthesis.speak(speech)
     } else {
@@ -74,12 +74,6 @@ class MainContent extends Component {
       return null
     }
     let content;
-    if(allOptions.type === 'map'){
-      setTimeout(() => {
-        showOptions(this.props.dispatch)
-      }, 1000);
-      content = <MapBox />
-    } else {
       const opt = this.getRenderedOptions(allOptions.options)
       content = opt.map(v => {
         const cls = cs(v.className, 'statement')
@@ -88,12 +82,14 @@ class MainContent extends Component {
             {v.type === 'property-card' &&
               <PropertyCard {...v.data} />
             }
+            {v.type === 'map' &&
+              <MapBox />
+            }
             {!v.type &&
               v.displayText
             }
           </div>)
       })
-    }
     return (
       <div className='sllr-statement-wrap'>
         {content}
