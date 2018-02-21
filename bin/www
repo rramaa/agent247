@@ -4,7 +4,7 @@ let webpackDevServer = require('webpack-dev-server');
 let webpackConfig = require("../webpack.config.js");
 
 let port = process.env.PORT || 8000;
-let host = process.env.HOST || 'keep-react.local.com';
+let host = process.env.HOST || 'localhost';
 
 webpackConfig.devtool = 'inline-source-map'
 webpackConfig.plugins = [...webpackConfig.plugins, new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()]

@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import { render } from "react-dom"
+import Sidebar from "scripts/containers/Sidebar"
+import MainContent from "scripts/containers/MainContent"
 import localStorageService from "scripts/services/localStorageService"
 import style from "style/style"
 import configureStore from 'scripts/services/store'
@@ -16,7 +18,7 @@ class ToDo extends Component {
     render() {
         return (
             <div>
-               "Hello World"
+                "Hello World"
             </div>
         )
     }
