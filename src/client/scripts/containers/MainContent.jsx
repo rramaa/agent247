@@ -71,12 +71,6 @@ class MainContent extends Component {
   render() {
     let allOptions = {...displayFields[this.props.step]}
     let content;
-    if(allOptions.type === 'map'){
-      setTimeout(() => {
-        showOptions(this.props.dispatch)
-      }, 1000);
-      content = <MapBox />
-    } else {
       const opt = this.getRenderedOptions(allOptions.options)
       content = opt.map(v => {
         const cls = cs(v.className, 'statement')
@@ -85,12 +79,14 @@ class MainContent extends Component {
             {v.type === 'property-card' &&
               <PropertyCard {...v.data} />
             }
+            {v.type === 'map' &&
+              <MapBox />
+            }
             {!v.type &&
               v.displayText
             }
           </div>)
       })
-    }
     return (
       <div className='sllr-statement-wrap'>
         {content}

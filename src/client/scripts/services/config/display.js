@@ -85,7 +85,19 @@ const options = {
     }]
   },
   [STEPS["STEP_8"]]: {
-    type: 'map'
+    type: 'text',
+    options: [{
+      displayText: 'Hi, sorry I couldn’t pick your call.',
+      id: 1
+    }, {
+      displayText: 'I saw that you have shown interest for rent in DLF Park Place',
+      id: 2
+    }, {
+      type: 'map'
+    }, {
+      displayText: 'Ho gaya khush?',
+      id: 3
+    }, ]
   },
   [STEPS["STEP_9"]]: {
     type: 'text',
