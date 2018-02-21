@@ -79,9 +79,7 @@ class MainContent extends Component {
     lastElem.className = cs(lastElem.className, 'current')
     if(!lastElem.type && !mute){
       const speech = talkToMe(lastElem.displayText)
-      speech.onend = () => {
-        this.onSpeechEnd(lastElem.variableDelay)
-      }
+      speech.onend = this.onSpeechEnd.bind(this, lastElem.variableDelay)
       changeSpeakingState(this.props.dispatch, true)
       speechSynthesis.speak(speech)
     } else {

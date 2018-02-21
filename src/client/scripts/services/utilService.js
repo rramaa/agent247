@@ -1,7 +1,8 @@
 import localStorageService from "scripts/services/localStorageService"
 
+var speech = new SpeechSynthesisUtterance();
+
 export function talkToMe(text){
-	var speech = new SpeechSynthesisUtterance();
-	speech.text = text || 'Did you miss me?';
+	speech.text = text
 	return speech
 }
