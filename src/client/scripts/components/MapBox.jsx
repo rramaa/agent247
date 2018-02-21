@@ -17,12 +17,10 @@ class MapBox extends Component{
 	componentDidMount(){
 		this.updatePath({
 			waypoints:[
-				{location:'montreal, quebec',stopover: true},
-				{location:'toronto, ont',stopover: true},
-				{location:'chicago, il',stopover: true}
+				{location:'28.43019035, 77.09134694',stopover: true}
 				],
-			origin: 'Halifax, NS',
-			destination: 'Vancouver, BC'
+			origin: '28.4439267, 77.10113164',
+			destination: '28.44226636, 77.07229253'
 		});
 		var mapScript = document.getElementById('map-script')
 		if (mapScript) {
