@@ -33,7 +33,7 @@ class MainContent extends Component {
     }
     this.mute = this.props.mute
   }
-  onSpeechEnd() {
+  onSpeechEnd(delay) {
     changeSpeakingState(this.props.dispatch, false)
     const {options: opt} = {...displayFields[this.props.step]}
     const { display } = this.state
@@ -50,7 +50,7 @@ class MainContent extends Component {
           display: prevState.display + 1
         }
       })
-    }, SPEECH_DELAY);
+    }, delay || SPEECH_DELAY);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -78,11 +78,13 @@ class MainContent extends Component {
     lastElem.className = cs(lastElem.className, 'current')
     if(!lastElem.type && !mute){
       const speech = talkToMe(lastElem.displayText)
-      speech.onend = this.onSpeechEnd
+      speech.onend = () => {
+        this.onSpeechEnd(lastElem.variableDelay)
+      }
       changeSpeakingState(this.props.dispatch, true)
       speechSynthesis.speak(speech)
     } else {
-      this.onSpeechEnd()
+      this.onSpeechEnd(lastElem.variableDelay)
     }
     return opt
   }

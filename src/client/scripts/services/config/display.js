@@ -99,7 +99,9 @@ const options = {
       displayText: 'It should take around 2 hours for the tour.',
       id: 2
     }, {
-      type: 'map'
+      type: 'map',
+      id: 4,
+      variableDelay: 5000
     }, {
       displayText: 'Please confirm if it sounds good?',
       id: 3
