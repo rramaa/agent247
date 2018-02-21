@@ -7,6 +7,8 @@ import { Provider, connect } from 'react-redux'
 import InputOptions from 'scripts/containers/InputOptions'
 import Output from 'scripts/containers/Output'
 
+import MapBox from 'scripts/components/MapBox'
+
 let store = configureStore()
 
 class ToDo extends Component {
@@ -17,9 +19,7 @@ class ToDo extends Component {
     render() {
         return (
             <div>
-                <Output />
-                <br/>
-                <InputOptions />
+                <MapBox />
             </div>
         )
     }
