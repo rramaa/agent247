@@ -3,7 +3,67 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="minimum-scale=1.0, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>React App</title>
+    <title>Agent 24-7</title>
+    <script>
+      function initMap() {
+        window.myDirectionsService = new google.maps.DirectionsService;
+        window.myDirectionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: {lat: 41.85, lng: -87.65}
+        });
+        myDirectionsDisplay.setMap(map);
+      	calculateAndDisplayRoute();
+      }
+
+      function calculateAndDisplayRoute() {
+      	var origin = window.origin,
+      		desination = window.destination,
+      		waypoints = window.waypoints,
+      		directionsService =  window.myDirectionsService,
+      		directionsDisplay = window.myDirectionsDisplay,
+
+      		tempDest='',
+      		tempWayPts=[],
+      		currWayPt=-1;
+
+      		looperPromise = function() {
+				return new Promise((resolve, reject)=>{
+					if(currWayPt < waypoints.length-1){
+						tempWayPts.push(waypoints[++currWayPt]);
+						tempDest = tempWayPts.slice(-1)[0].location;
+					} else if (currWayPt == waypoints.length) {
+						tempWayPts.push(waypoints[waypoints.length-1]);
+						tempDest = desination;
+					} else {
+						reject('Finished Routing');
+					}
+					directionsService.route({
+					  origin: origin,
+					  destination: tempDest,
+					  waypoints: tempWayPts,
+					  optimizeWaypoints: true,
+					  travelMode: 'DRIVING'
+					}, function(response, status) {
+					  if (status === 'OK') {
+					    directionsDisplay.setDirections(response);
+					    return resolve();
+					    var route = response.routes[0];
+					  } else {
+					    window.alert('Directions request failed due to ' + status);
+					    return reject();
+					  }
+					});
+				});
+      		},
+
+      		looper = function (){
+      			looperPromise().then(()=>{setTimeout(looper,1000)});
+      		};
+
+      		looper();
+      }
+    </script>
   </head>
   <body>
   	<div id="root"></div>

@@ -5,6 +5,7 @@ import Button from 'scripts/components/Button'
 import autobind from 'react-auto-bind'
 import cs from 'classnames'
 import {talkToMe} from 'scripts/services/utilService'
+import MapBox from 'scripts/components/MapBox'
 
 function showOptions(dispatch) {
   dispatch({
@@ -21,7 +22,7 @@ class MainContent extends Component {
     }
   }
   onSpeechEnd() {
-    const opt = [...displayFields[this.props.step]]
+    const {options: opt} = {...displayFields[this.props.step]}
     const { display } = this.state
     if (opt.length - 1 === display) {
       showOptions(this.props.dispatch)
@@ -38,8 +39,7 @@ class MainContent extends Component {
   componentWillReceiveProps() {
     this.setState({ display: 0 })
   }
-  getRenderedOptions() {
-    let opt = [...displayFields[this.props.step]]
+  getRenderedOptions(opt) {
     const { display } = this.state
     opt = opt.filter((v, i) => {
       return i <= display
@@ -55,13 +55,21 @@ class MainContent extends Component {
     return opt
   }
   render() {
-    const opt = this.getRenderedOptions(opt)
-    return opt.map(v => {
-      return (
-        <p className={v.className} key={v.id}>
-          {v.displayText}
-        </p>)
-    })
+    let allOptions = {...displayFields[this.props.step]}
+    if(allOptions.type === 'map'){
+      setTimeout(() => {
+        showOptions(this.props.dispatch)
+      }, 1000);
+      return <MapBox />
+    } else {
+      const opt = this.getRenderedOptions(allOptions.options)
+      return opt.map(v => {
+        return (
+          <p className={v.className} key={v.id}>
+            {v.displayText}
+          </p>)
+      })
+    }
   }
 }
 
