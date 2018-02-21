@@ -30,6 +30,12 @@ export default function rootReducer(state={}, {type, payload}){
 				showOptions: payload
 			}
 			break;
+		case 'CHANGE_SPEAKING_STATE':
+			newState = {
+				...state,
+				speaking: payload
+			}
+			break;
 		default:
 			newState = {
 				...state

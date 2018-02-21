@@ -15,13 +15,13 @@ class Button extends Component {
 	render() {
 		const cls = cs('button', this.props.className)
 		return (
-			<button 
+			<div 
 				className={cls}
 			  onClick={this.onClick}
 			  disabled={this.props.disabled}
 			  >
 			{this.props.text}
-			</button>
+			</div>
 		)
 	}
 }

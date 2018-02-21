@@ -6,11 +6,19 @@ import autobind from 'react-auto-bind'
 import cs from 'classnames'
 import {talkToMe} from 'scripts/services/utilService'
 import MapBox from 'scripts/components/MapBox'
+import PropertyCard from 'scripts/components/PropertyCard'
 
 function showOptions(dispatch) {
   dispatch({
     type: 'SHOW_OPTIONS',
     payload: true
+  })
+}
+
+function changeSpeakingState(dispatch, speaking) {
+  dispatch({
+    type: 'CHANGE_SPEAKING_STATE',
+    payload: speaking
   })
 }
 class MainContent extends Component {
@@ -22,6 +30,7 @@ class MainContent extends Component {
     }
   }
   onSpeechEnd() {
+    changeSpeakingState(this.props.dispatch, false)
     const {options: opt} = {...displayFields[this.props.step]}
     const { display } = this.state
     if (opt.length - 1 === display) {
@@ -49,27 +58,44 @@ class MainContent extends Component {
     }
     const lastElem = opt[opt.length - 1]
     lastElem.className = cs(lastElem.className, 'current')
-    const speech = talkToMe(lastElem.displayText)
-    speech.onend = this.onSpeechEnd
-    speechSynthesis.speak(speech)
+    if(!lastElem.type){
+      const speech = talkToMe(lastElem.displayText)
+      speech.onend = this.onSpeechEnd
+      changeSpeakingState(this.props.dispatch, true)
+      speechSynthesis.speak(speech)
+    } else {
+      this.onSpeechEnd()
+    }
     return opt
   }
   render() {
     let allOptions = {...displayFields[this.props.step]}
+    let content;
     if(allOptions.type === 'map'){
       setTimeout(() => {
         showOptions(this.props.dispatch)
       }, 1000);
-      return <MapBox />
+      content = <MapBox />
     } else {
       const opt = this.getRenderedOptions(allOptions.options)
-      return opt.map(v => {
+      content = opt.map(v => {
+        const cls = cs(v.className, 'statement')
         return (
-          <p className={v.className} key={v.id}>
-            {v.displayText}
-          </p>)
+          <div className={cls} key={v.id}>
+            {v.type === 'property-card' &&
+              <PropertyCard {...v.data} />
+            }
+            {!v.type &&
+              v.displayText
+            }
+          </div>)
       })
     }
+    return (
+      <div className='sllr-statement-wrap'>
+        {content}
+      </div>
+      )
   }
 }
 

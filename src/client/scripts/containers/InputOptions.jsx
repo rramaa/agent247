@@ -27,17 +27,19 @@ class InputOptions extends Component {
     }
     const opt = ([...options[this.props.step]]).map(v => ({...v}))
     return (
-      opt.map(v => {
+      <div className='options-wrap'>
+      {opt.map(v => {
         return (
           <Button
-            className='test'
+            className='btn mb10'
             text={v.displayText}
             data={v}
             key={JSON.stringify(v)}
             onClick={this.onClick}
           />
         )
-      })
+      })}
+      </div>
     )
   }
 }

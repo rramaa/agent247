@@ -15,6 +15,13 @@ const options = {
     }, {
       displayText: 'Hey Mark, whats up?',
       id: 4
+    }, {
+      type: 'property-card',
+      data: {
+        title: '4 BHK Apartment',
+        location: 'DLF Park Place',
+        locality: 'Sector 54, Gurgaon'
+      }
     }]
   },
   [STEPS["STEP_2"]]: {
