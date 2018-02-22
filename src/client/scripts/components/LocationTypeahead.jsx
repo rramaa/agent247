@@ -15,14 +15,14 @@ class LocationTypeahead extends Component {
   }
   render() {
     return (
-      <div id="mapWrap">
+      <div id="mapWrap" className="location-map-wrap">
         <div className="pac-card" id="pac-card">
             <div id="pac-container">
-              <input id="pac-input" type="text" placeholder="Enter a location" />
+              <input id="pac-input" type="text" placeholder="Enter your location" />
             </div>
         </div>
 
-        <div id="map" className="" style={{ width: 'calc(100% + 20px)', height: '400px', marginLeft: '-10px' }}></div>
+        <div id="map" className="location-map"></div>
         
         <div id="infowindow-content">
           <span id="place-name" className="title"></span><br/>
