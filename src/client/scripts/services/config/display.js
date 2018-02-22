@@ -105,28 +105,21 @@ const options = {
   [STEPS["STEP_7"]]: {
     type: 'text',
     options: [{
-      displayText: 'UNCHARTED TERRITORY! HOW DID YOU FIND ME?',
-      id: 1
-    }]
-  },
-  [STEPS["STEP_8"]]: {
-    type: 'text',
-    options: [{
       displayText: 'Thanks, I have created a property schedule for you below.',
       id: 1
-    }, {
-      displayText: 'It should take around 2 hours for the tour.',
-      id: 2
     }, {
       type: 'map',
       id: 4,
       variableDelay: 5000
     }, {
+      displayText: 'It should take around 2 hours for the tour.',
+      id: 2
+    }, {
       displayText: 'Please confirm if it sounds good?',
       id: 3
     }]
   },
-  [STEPS["STEP_9"]]: {
+  [STEPS["STEP_8"]]: {
     type: 'text',
     options: [{
       displayText: 'We also provide a complimentary pick up service from your location.',
@@ -136,20 +129,78 @@ const options = {
       id: 2
     }]
   },
-  [STEPS["STEP_10"]]: {
+  [STEPS["STEP_9"]]: {
     options: [{
       type: 'location',
       id: 1
     }]
   },
-  [STEPS["STEP_11"]]: {
+  [STEPS["STEP_10"]]: {
     type: 'text',
     options: [{
-      displayText: 'It was great talking to you Mark.',
+      displayText: 'Thanks, the car pick up will reach this [day] [morning/afternoon/evening]',
       id: 1
+    }, {
+      displayText: 'It was great talking to you Mark.',
+      id: 2
     }, {
       displayText: 'Looking forward!',
       id: 2
+    }]
+  },
+  [STEPS["STEP_11"]]: {
+    type: 'text',
+    options: [{
+      displayText: 'DLF Park Place, located in Sector 54, offers apartments with the price being on request.',
+      id: 1
+    }, {
+      type: 'image',
+      data: ""
+    }, {
+        displayText: 'This area is the leading financial and industrial centre of the city.',
+      id: 2
+    }, {
+        displayText: 'It offers facilities like Gymnasium, swimming pool, childrens play area, club house, and many other luxury amenities.',
+      id: 2
+      }]
+  },
+  [STEPS["STEP_12"]]: {
+    type: 'text',
+    options: [{
+      displayText: 'Certainly you can.',
+      id: 1
+    }, {
+        displayText: 'I can also show you some similar properties nearby if you like',
+      id: 2
+    }]
+  },
+  [STEPS["STEP_13"]]: {
+    type: 'text',
+    options: [{
+      displayText: 'No worries, I have noted down your interest',
+      id: 1
+    }, {
+      displayText: 'If you have any further queries, you can reach out to me on my cell phone.',
+      id: 2
+    }, {
+      displayText: 'It was great talking to you Mark',
+      id: 3
+    }, {
+        displayText: 'Looking forward!',
+      id: 4
+    }]
+  },
+  [STEPS["STEP_14"]]: {
+    type: 'text',
+    options: [{
+      displayText: 'Certainly, let’s catchup at [day] [morning/afternoon/evening]',
+      id: 1
+    }, {
+      displayText: 'It was great talking to you Mark.',
+      id: 2
+    }, {
+      displayText: 'Looking forward!',
+      id: 3
     }]
   }
 }

@@ -12,4 +12,7 @@ export default {
   STEP_10: "Step 10",
   STEP_11: "Step 11",
   STEP_12: "Step 12",
+  STEP_13: "Step 13",
+  STEP_14: "Step 14",
+  EXIT: "Exit"
 }
