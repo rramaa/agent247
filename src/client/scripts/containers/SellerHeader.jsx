@@ -36,7 +36,7 @@ class SellerHeader extends Component {
     return (
         <div className="sllr-info-wrap">
           <div className={cls}>
-            {stepStack.length >= 1 &&
+            {stepStack.length >= 2 &&
               <i className="fa fa-arrow-left" onClick={this.goBack}></i>
             }
             <i

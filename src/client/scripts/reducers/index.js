@@ -9,7 +9,7 @@ export function getInitialState(){
 	const newState = {
 		step: STEPS["INTRO"],
 		showOptions: false,
-		mute: true
+		mute: false
 	}
 	return newState
 }
