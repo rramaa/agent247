@@ -27,15 +27,17 @@
 
       		looperPromise = function() {
 				return new Promise((resolve, reject)=>{
+					if(tempDest != '') tempWayPts.push({location:tempDest, stopover:true});
+
 					if(currWayPt < waypoints.length-1){
-						tempWayPts.push(waypoints[++currWayPt]);
-						tempDest = tempWayPts.slice(-1)[0].location;
-					} else if (currWayPt == waypoints.length) {
-						tempWayPts.push(waypoints[waypoints.length-1]);
+						tempDest = waypoints[++currWayPt].location;
+					} else if (currWayPt == waypoints.length-1) {
+						currWayPt++;
 						tempDest = desination;
 					} else {
-						reject('Finished Routing');
+						return reject('Finished Routing');
 					}
+
 					directionsService.route({
 					  origin: origin,
 					  destination: tempDest,
@@ -62,7 +64,6 @@
       		looper();
       }
     </script>
-    <title>React App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
