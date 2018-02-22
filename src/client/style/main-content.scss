@@ -188,7 +188,8 @@ body {
 /* SELLER STATEMENTS STARTS */
 .sllr-statement-wrap {
 	position: relative;
-	max-height: calc(100vh - 180px - 150px);
+	//max-height: calc(100vh - 180px - 150px);
+	max-height: calc(100vh - 180px);
 	overflow-x: hidden;
 	overflow-y: auto;
 	margin-top: 170px;
@@ -244,10 +245,15 @@ body {
 	}
 
 	.btn-wrap {
-		justify-content: space-between;
+		padding-top: 10px;
+		justify-content: space-around;
 
 		.btn {
-			margin: 0 10px 10px 0;
+			width: 120px;
+
+			i {
+				margin-right: 5px;
+			}
 		}
 	}
 }
