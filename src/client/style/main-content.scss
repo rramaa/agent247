@@ -54,6 +54,7 @@ body {
     to   { opacity: 1; }
 }
 .fadein {
+	z-index: 2;
 	animation: fadein 2s;
 }
 
@@ -263,8 +264,10 @@ body {
 	
 }
 
-.with-options {
-
+.withoptions {
+	position: relative;
+	opacity: 0;
+	z-index: 1;
 }
 /* GENERIC CARD ENDS */
 
