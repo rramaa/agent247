@@ -18,7 +18,7 @@ STEP 11 -> Kill Me PLEASE
 const options = {
   [STEPS["INTRO"]]: {
     type: 'intro',
-    nextStep: STEPS["STEP_1"]
+    nextStep: STEPS["STEP_6"]
   },
   [STEPS["STEP_1"]]: [
     {
@@ -66,7 +66,10 @@ const options = {
       nextStep: STEPS["STEP_8"]
     }, {
       displayText: 'Some other time slot',
-      action: "OPEN_TIME_SLOT"
+      action: {
+        type: 'OPEN_MODAL',
+        payload: 'time-slot-vala'
+      }
     }
   ],
   [STEPS["STEP_7"]]: [

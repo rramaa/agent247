@@ -16,6 +16,8 @@ class InputOptions extends Component {
   onClick(data) {
     if(data.nextStep){
       changeStep(this.props.dispatch, data.nextStep)
+    } else if(data.action){
+      this.props.dispatch(data.action)
     }
   }
   render() {

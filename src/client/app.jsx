@@ -7,6 +7,7 @@ import { Provider, connect } from 'react-redux'
 import InputOptions from 'scripts/containers/InputOptions'
 import MainContent from 'scripts/containers/MainContent'
 import SellerHeader from 'scripts/containers/SellerHeader'
+import Popup from 'scripts/containers/Popup'
 
 let store = configureStore()
 
@@ -21,6 +22,7 @@ class ToDo extends Component {
                 <SellerHeader />
                 <MainContent />
                 <InputOptions />
+                <Popup />
             </div>
         )
     }
