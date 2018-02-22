@@ -28,7 +28,7 @@ export function startMapAutocomplete(cb){
           center: {lat: -33.8688, lng: 151.2195},
           zoom: 13
         });
-	    map.controls[window.GMAPS.ControlPosition.TOP_RIGHT].push(card);
+	    //map.controls[window.GMAPS.ControlPosition.TOP_RIGHT].push(card);
 
 	    var autocomplete = new window.GMAPS.places.Autocomplete(input);
 		autocomplete.bindTo('bounds', map);
@@ -56,10 +56,10 @@ export function startMapAutocomplete(cb){
           map.setZoom(17);
           marker.setPosition(place.geometry.location);
           marker.setVisible(true);
-					// Show Proceed button
-					if(cb) {
-						cb(place)
-					}
+			// Show Proceed button
+			if(cb) {
+				setTimeout(()=>{cb(place)}, 3000);
+			}
       	});
 }
 
