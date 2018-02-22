@@ -3,7 +3,7 @@ import STEPS from 'scripts/services/config/steps'
 const options = {
     [STEPS["INTRO"]]: {
         type: 'intro',
-        nextStep: STEPS["STEP_6"]
+        nextStep: STEPS["STEP_1"]
     },
     [STEPS["STEP_1"]]: [{
         displayText: 'Know more about the property',
