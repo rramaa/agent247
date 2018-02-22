@@ -22,7 +22,7 @@ const options = {
   },
   [STEPS["STEP_1"]]: [
     {
-      displayText: 'Know more on the property.',
+      displayText: 'Know more about the property.',
       nextStep: STEPS["STEP_2"]
     },{
       displayText: 'Know more about DLF Park Place.'
@@ -35,14 +35,12 @@ const options = {
       displayText: 'Any other similar properties nearby?',
       nextStep: STEPS["STEP_3"]
     }, {
-      displayText: 'Who is the owner?'
-    }, {
       displayText: 'When can I visit the property?'
     }
   ],
   [STEPS["STEP_3"]]: [
     {
-      displayText: 'I can go upto 1Lac if required.',
+      displayText: 'I can go upto 10K if required.',
       nextStep: STEPS["STEP_4"]
     }, {
       displayText: 'No, that is my upper limit'
@@ -54,7 +52,7 @@ const options = {
       displayText: 'Yes definitely',
       nextStep: STEPS["STEP_6"]
     }, {
-      displayText: 'Umm..Not sure yet'
+      displayText: 'Umm.. Not sure yet'
     }
   ],
   [STEPS["STEP_6"]]: [
@@ -62,14 +60,12 @@ const options = {
       displayText: 'Saturday afternoon',
       nextStep: STEPS["STEP_8"]
     }, {
-      displayText: 'Sunday afternoon.'
-    }, {
-      displayText: 'Some other time.'
+      displayText: 'Some other time slot'
     }
   ],
   [STEPS["STEP_7"]]: [
     {
-      displayText: 'Seems that I am lost, show me da wey?',
+      displayText: 'Seems that I am lost, show me the way?',
       nextStep: STEPS["STEP_1"]
     }, {
       displayText: 'NO.'
