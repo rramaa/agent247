@@ -15,7 +15,7 @@ class Intro extends Component {
           <div className="sllr-head intro">
             <div className="sllr-img-wrap"></div>
           </div>
-          <div className="sllr-name">John Mathewz</div>
+          <div className="sllr-name">John Reeves</div>
           <div className="sllr-loc">Rai Realtors, Gurgaon</div>
         </div>
 
