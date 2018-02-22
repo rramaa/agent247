@@ -5,9 +5,15 @@ import Button from 'scripts/components/Button'
 import Intro from 'scripts/components/Intro'
 import autobind from 'react-auto-bind'
 import {changeStep} from 'scripts/actions/index'
+import cs from 'classnames'
 
 const INTRO_TIMER = 5000
 
+const classMap = {
+  ["0"]: '',
+  ["1"]: 'btn-s',
+  ["2"]: 'btn-t'
+}
 class InputOptions extends Component {
   constructor(props) {
     super(props)
@@ -16,6 +22,8 @@ class InputOptions extends Component {
   onClick(data) {
     if(data.nextStep){
       changeStep(this.props.dispatch, data.nextStep)
+    } else if(data.action){
+      this.props.dispatch(data.action)
     }
   }
   render() {
@@ -34,10 +42,11 @@ class InputOptions extends Component {
     opt = opt.map(v => ({ ...v }))
     return (
       <div className='options-wrap'>
-      {opt.map(v => {
+      {opt.map((v, i) => {
+          const className = cs('btn mb10', classMap[i])
         return (
           <Button
-            className='btn mb10'
+            className={className}
             text={v.displayText}
             data={v}
             key={JSON.stringify(v)}

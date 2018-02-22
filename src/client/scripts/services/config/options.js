@@ -66,7 +66,10 @@ const options = {
       nextStep: STEPS["STEP_8"]
     }, {
       displayText: 'Some other time slot',
-      action: "OPEN_TIME_SLOT"
+      action: {
+        type: 'OPEN_MODAL',
+        payload: 'time-slot-vala'
+      }
     }
   ],
   [STEPS["STEP_7"]]: [

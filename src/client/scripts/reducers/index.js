@@ -43,6 +43,18 @@ export default function rootReducer(state={}, {type, payload}){
 				mute: !state.mute
 			}
 			break;
+		case 'OPEN_MODAL':
+			newState = {
+				...state,
+				modal: payload
+			}
+			break;
+		case 'CLOSE_MODAL':
+			newState = {
+				...state,
+				modal: false
+			}
+			break;
 		default:
 			newState = {
 				...state
