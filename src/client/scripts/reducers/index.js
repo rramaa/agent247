@@ -52,7 +52,15 @@ export default function rootReducer(state={}, {type, payload}){
 		case 'CLOSE_MODAL':
 			newState = {
 				...state,
-				modal: false
+				modal: false,
+				modalData: null
+			}
+			break;
+		case "OPEN_PROPERTY_MODAL":
+			newState = {
+				...state,
+				modal: 'property-detail',
+				modalData: payload
 			}
 			break;
 		default:

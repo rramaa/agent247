@@ -66,14 +66,16 @@ const options = {
         location: 'Builder Project',
         locality: 'Sector 28, Gurgaon',
         price: '80,000',
-        id: 1
+        id: 1,
+        url: 'https://www.makaan.com'
       }, {
         imgurl: 'https://content.makaan.com/16/6965910/274/9464059.jpeg?width=1024&height=576',
         title: '4 BHK Apartment',
         location: 'DLF Belaire',
         locality: 'Sector 54, Gurgaon',
         price: '95,000',
-        id: 2
+        id: 2,
+        url: 'https://www.makaan.com'
       }],
       nextStep: STEPS["STEP_5"],
       id: 3

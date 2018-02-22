@@ -18,4 +18,11 @@ export function undoChangeStep(dispatch){
 	}	
 }
 
+export function openPropertyModal(dispatch, data) {
+	dispatch({
+		type: 'OPEN_PROPERTY_MODAL',
+		payload: data
+	})
+}
+
 export {stepStack}
