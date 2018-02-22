@@ -114,12 +114,10 @@ body {
 // move car animation
 @keyframes movecar {
     0% {
-        -webkit-transform: translateX(5px);
         transform: translateX(5px);
     }
     100% {
-        -webkit-transform: translateX(390px);
-        transform: translateX(390px);
+        transform: translateX(250px);
     }
 }
 
@@ -171,7 +169,6 @@ body {
         font-size: 18px;
     }
     &.speak {
-        //background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
         background: linear-gradient(-45deg, #EE7752, #E73C7E, #6f1cff, #23A6D5, #23D5AB);
         background-size: 400% 400%;
         animation: Gradient 5s ease infinite;
@@ -231,13 +228,15 @@ body {
 /** Car gif **/
 .car-gif {
     position: relative;
-    width: 100%;
+    width: 300px;
     height: 75px;
+	margin: 0 auto;
     background-image: url(//d1c42d2bmccy49.cloudfront.net/images/bg-req-sitevisit.2d2aae26.jpg);
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center;
     background-size: contain;
     background-color: #fff;
+	
     .car {
         position: absolute;
         left: 5px;
@@ -252,6 +251,17 @@ body {
     }
 }
 
+/** calendar image **/
+.calendar {
+    width: 235px;
+    height: 152px;
+	margin: 0 auto;
+    background-image: url(https://github.com/rramaa/agent247/blob/UX-changes/src/client/images/calendar.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #fff;
+}
 
 /* DLF park place */
 .park-place {
@@ -264,6 +274,20 @@ body {
     background-color: #ccc;
     background-size: cover;
     background-image: url(//content.makaan.com/1/0/297/1001602.jpeg?width=1024&height=576)
+}
+
+/** property Image **/
+.propimg {
+    width: 100%;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ccc;
+    background-size: cover;
+    background-image: url(//content.makaan.com/16/3566057/274/18812257.jpeg?width=1024&height=576)
+
 }
 
 
@@ -302,7 +326,9 @@ body {
 
 .withoptions {
     position: relative;
-    height: 170px;
+	height: 170px;
+	margin-bottom: 80px;
+
     .similarcard {
         position: absolute;
         top: 30px;
@@ -337,6 +363,7 @@ body {
             padding: 10px;
         }
         .btn-wrap {
+			padding-bottom: 10px;
             justify-content: space-around;
             .btn {
                 width: 120px;
@@ -501,8 +528,10 @@ body {
 			padding: 10px;
 			border-bottom: solid 1px #ececec;
 			color: #666;
+			cursor: pointer;
 
 			i {
+				color: $link-color2;
 				margin-right: 5px;
 			}
 		}

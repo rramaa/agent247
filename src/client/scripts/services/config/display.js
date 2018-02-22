@@ -33,6 +33,12 @@ const options = {
       displayText: 'This apartment is situated in one of the most sought after luxury societies in the city by DLF',
       id: 1
     }, {
+      type: 'image',
+      data: {
+        class1: 'propimg',
+        class2: 'hide'
+      }
+    }, {
         displayText: 'It is a meticulously designed 4BHK apartment with innovative interiors and facilities',
       id: 2
     }, {
@@ -106,9 +112,16 @@ const options = {
     },{
       displayText: 'I am free this saturday afternoon',
       id: 2
-    },{
-      displayText: 'Tell me when you are free?',
+    }, {
+      type: 'image',
+      data: {
+        class1: 'calendar',
+        class2: 'hide'
+      },
       id: 3
+    }, {
+      displayText: 'Tell me when you are free?',
+      id: 4
     }]
   },
   [STEPS["STEP_7"]]: {
