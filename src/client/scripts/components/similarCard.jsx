@@ -48,7 +48,7 @@ class SimilarCardList extends Component{
     }
     render() {
         return this.props.data.map((v, i) => {
-            const className = cs("card", {
+            const className = cs("card withoptions", {
                 'fadein': this.state.current - i === 1
             })
             return (
