@@ -163,7 +163,10 @@ const options = {
       id: 1
     }, {
       type: 'image',
-      data: ""
+      data: {
+        class1: 'park-place',
+        class2: 'hide'
+      }
     }, {
         displayText: 'This area is the leading financial and industrial centre of the city.',
       id: 2
