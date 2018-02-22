@@ -204,5 +204,5 @@ const options = {
       id: 3
     }]
   }
-
+}
 export default options
