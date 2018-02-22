@@ -36,11 +36,28 @@ export function startMapAutocomplete(){
 	    var infowindow = new window.GMAPS.InfoWindow();
 	    var infowindowContent = document.getElementById('infowindow-content');
 	    infowindow.setContent(infowindowContent);
-	    
 	    var marker = new window.GMAPS.Marker({
 	      map: map,
 	      anchorPoint: new window.GMAPS.Point(0, -29)
 	    });
+	    autocomplete.addListener('place_changed', function() {
+          infowindow.close();
+          marker.setVisible(false);
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            window.alert("No details available for input: '" + place.name + "'");
+            return;
+          }
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+          }
+          map.setZoom(17);
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);
+          // Show Proceed button
+      	});
 }
 
 export function calculateAndDisplayRoute(origin , destination, waypoints) {
