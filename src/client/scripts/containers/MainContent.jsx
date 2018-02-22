@@ -91,7 +91,7 @@ class MainContent extends Component {
     return opt
   }
   changeStep(step) {
-    changeStep(this.props.dispatch, step)
+    changeStep(this.props.dispatch, step, this.props.step)
   }
   locationSelected(place, step) {
     this.changeStep(step)

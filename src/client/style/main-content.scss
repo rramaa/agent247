@@ -1,29 +1,28 @@
 @import "./variables";
-
 body {
-	color: #333;
-	font-size: 14px;
-	font-family: $myfont;
+    color: #333;
+    font-size: 14px;
+    font-family: $myfont;
 }
 
 .pb10 {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .mb10 {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .ta-c {
-	text-align: center;
+    text-align: center;
 }
 
 .ta-l {
-	text-align: left;
+    text-align: left;
 }
 
 .ta-r {
-	text-align: right;
+    text-align: right;
 }
 
 .ltxt { /* light color text */
@@ -31,220 +30,238 @@ body {
 }
 
 .hide {
-	display: none;
+    display: none;
 }
 
 .flexrow {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 // progress bar animation 
-@keyframes progress-bar-stripes { 
-    0% { 
-		width: 0;
-		background-position: 0 0;
-	}
-	30% {
-		width: 60%;
-		background-position: 20px 0;
-	}
+@keyframes progress-bar-stripes {
+    0% {
+        width: 0;
+        background-position: 0 0;
+    }
+    30% {
+        width: 60%;
+        background-position: 20px 0;
+    }
     100% {
-		width: 100%;
-		background-position: 40px 0;
-	}
+        width: 100%;
+        background-position: 40px 0;
+    }
 }
 
 // fade In Animation
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 // slide Up Animation
 @keyframes slideup {
-    from { transform: translateY(150px); }
-    to   { transform: translateY(0); }
+    from {
+        transform: translateY(150px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 // Gradient Animation
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	25% {
-		background-position: 50% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	75% {
-		background-position: 50% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+    0% {
+        background-position: 0% 50%
+    }
+    25% {
+        background-position: 50% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    75% {
+        background-position: 50% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 // bounce animation
 @keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {
-	  transform: translateY(0);
-	}
-	40% {
-	  transform: translateY(-10px);
-	}
-	60% {
-	  transform: translateY(-4px);
-	}
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
 }
 
 // move car animation
 @keyframes movecar {
-	0% {
-		-webkit-transform: translateX(5px);
-		transform: translateX(5px);
-	}
-	100% {
-		-webkit-transform: translateX(390px);
-		transform: translateX(390px);
-	}
+    0% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    100% {
+        -webkit-transform: translateX(390px);
+        transform: translateX(390px);
+    }
 }
 
-.body-container {
+.body-container {}
 
-}
 
 /* SELLER INFORMATION STARTS */
+
 .sllr-info-wrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
 }
 
 .sllr-head {
-	position: relative;
-	width: 100%;
-	height: 60px;
-	margin: 0;
-	padding: 15px;
-	background: #333;
-	color: #fff;
-
-	.fa-arrow-left {
-		position: absolute;
-		top: 10px;
-		left: 0px;
-		z-index: 3;
-		width: 40px;
-		height: 40px;
-		padding: 12px 0 0 0;
-		color: #fff;
-		font-size: 18px;
-		content: 'back';
-		opacity: 0;
-	}
-
-	[class*='fa-volume-'] {
-		position: absolute;
-		top: 10px;
-		right: 0px;
-		z-index: 3;
-		width: 40px;
-		height: 40px;
-		padding: 12px 0 0 0;
-		color: #fff;
-		font-size: 18px;
-	}
-
-	&.speak {
-		//background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-		background: linear-gradient(-45deg, #EE7752, #E73C7E, #6f1cff, #23A6D5, #23D5AB);
-		background-size: 400% 400%;
-		animation: Gradient 5s ease infinite;
-	}
-
-	&.intro {
-		margin-top: 20px;
-		background-color: transparent;
-	}
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    .fa-arrow-left {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        z-index: 3;
+        width: 40px;
+        height: 40px;
+        padding: 12px 0 0 0;
+        color: #fff;
+        font-size: 18px;
+        content: 'back';
+    }
+    [class*='fa-volume-'] {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        z-index: 3;
+        width: 40px;
+        height: 40px;
+        padding: 12px 0 0 0;
+        color: #fff;
+        font-size: 18px;
+    }
+    &.speak {
+        //background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+        background: linear-gradient(-45deg, #EE7752, #E73C7E, #6f1cff, #23A6D5, #23D5AB);
+        background-size: 400% 400%;
+        animation: Gradient 5s ease infinite;
+    }
+    &.intro {
+        margin-top: 20px;
+        background-color: transparent;
+    }
 }
 
 .sllr-img-wrap {
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 90px;
-	height: 90px;
-	background-image: url(https://github.com/rramaa/agent247/blob/master/src/client/images/dummy-sllr.png?raw=true);
-	background-color: #999;
-	border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    background-image: url(https://github.com/rramaa/agent247/blob/master/src/client/images/dummy-sllr.png?raw=true);
+    background-color: #999;
+    border-radius: 50%;
 }
 
-.sllr-img {
-
-}
+.sllr-img {}
 
 .sllr-name {
-	padding: 60px 0 0;
-	font-size: 15px;
+    padding: 60px 0 0;
+    font-size: 15px;
 }
 
 .sllr-loc {
-	padding-top: 5px;
-	color: #999;
-	font-size: 12px;
+    padding-top: 5px;
+    color: #999;
+    font-size: 12px;
 }
+
+
 /* SELLER INFORMATION ENDS */
 
 
 /* SELLER STATEMENTS STARTS */
 .sllr-statement-wrap {
-	position: relative;
-	//max-height: calc(100vh - 180px - 150px);
-	max-height: calc(100vh - 180px);
-	overflow-x: hidden;
-	overflow-y: auto;
-	margin-top: 170px;
-	padding: 20px 10px;
-	font-size: 16px;
-
-	.statement {
-		padding-bottom: 20px;
-		animation: fadein 2s;
-	}
+    position: relative; //max-height: calc(100vh - 180px - 150px);
+    max-height: calc(100vh - 180px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 170px;
+    padding: 20px 10px;
+    font-size: 16px;
+    .statement {
+        padding-bottom: 20px;
+        animation: fadein 2s;
+    }
 }
 /* SELLER STATEMENTS ENDS */
 
 
 /** Car gif **/
 .car-gif {
-	position: relative;
+    position: relative;
     width: 100%;
-	height: 75px;
-	background-image: url(//d1c42d2bmccy49.cloudfront.net/images/bg-req-sitevisit.2d2aae26.jpg);
+    height: 75px;
+    background-image: url(//d1c42d2bmccy49.cloudfront.net/images/bg-req-sitevisit.2d2aae26.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: contain;
-	background-color: #fff;
-	
-	.car {
-		position: absolute;
-		left: 5px;
-		bottom: 0;
-		width: 40px;
-		height: 20px;
-		background-image: url(//d1c42d2bmccy49.cloudfront.net/images/car.98ff3bab.png);
-		background-repeat: no-repeat;
-		background-position: left top;
-		background-size: contain;
-		animation: movecar 5s ease-in-out 0s infinite none running;
-	}
+    background-color: #fff;
+    .car {
+        position: absolute;
+        left: 5px;
+        bottom: 0;
+        width: 40px;
+        height: 20px;
+        background-image: url(//d1c42d2bmccy49.cloudfront.net/images/car.98ff3bab.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        animation: movecar 5s ease-in-out 0s infinite none running;
+    }
+}
+
+
+/* DLF park place */
+.park-place {
+    width: 100%;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ccc;
+    background-size: cover;
+    background-image: url(//content.makaan.com/1/0/297/1001602.jpeg?width=1024&height=576)
 }
 
 
@@ -282,130 +299,129 @@ body {
 }
 
 .withoptions {
-	position: relative;
-	height: 170px;
-
-	.similarcard {
-		position: absolute;
-		top: 30px;
-		left: 0;
-		//right: 0;
-		z-index: 1;
-		width: 100%;
-		padding: 0;
-		visibility: hidden;
-		opacity: 0;
-		transform: scale(0.5);
-		transition: all 0.5s ease-in;
-
-		&.fadein {
-			visibility: visible;
-			opacity: 1;
-			transform: scale(1);
-			z-index: 2;
-		}
-
-		.otp-title {
-			position: absolute;
-			top: -30px;
-			width: 100%;
-			color: #999;
-			text-transform: uppercase;
-			text-align: center;
-		}
-		
-		.img-wrap {
-			display: block;
-			width: 100%;
-			height: 100px;		
-		}
-
-		.prop-content {
-			padding: 10px;
-		}
-
-		.btn-wrap {
-			justify-content: space-around;
-	
-			.btn {
-				width: 120px;
-	
-				i {
-					margin-right: 5px;
-				}
-			}
-		}
-	}
+    position: relative;
+    height: 170px;
+    .similarcard {
+        position: absolute;
+        top: 30px;
+        left: 0; //right: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.5);
+        transition: all 0.5s ease-in;
+        &.fadein {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+            z-index: 2;
+        }
+        .otp-title {
+            position: absolute;
+            top: -30px;
+            width: 100%;
+            color: #999;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .img-wrap {
+            display: block;
+            width: 100%;
+            height: 100px;
+        }
+        .prop-content {
+            padding: 10px;
+        }
+        .btn-wrap {
+            justify-content: space-around;
+            .btn {
+                width: 120px;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }
+
+
 /* GENERIC CARD ENDS */
 
-/* OPTIONS CSS STARTS */
-.options-wrap {
-	position: fixed;
-	bottom: 0px;
-	left: 0;
-	right: 0;
-	max-height: 150px;
-	padding: 10px;
-	animation: slideup 1s;
-}
-.btn {
-	padding: 8px 20px;
-	background-color: $link-color2;
-	border-radius: 20px;
-	text-align: center;
-	color: #fff;
-	font-size: 14px;
-	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
-	cursor: pointer;
-	
-	&.btn-s {
-		background-color: $link-color2;
-	}
 
-	&.btn-t {
-		background-color: $link-color3;
-	}
+/* OPTIONS CSS STARTS */
+
+.options-wrap {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    max-height: 150px;
+    padding: 10px;
+    animation: slideup 1s;
 }
+
+.btn {
+    padding: 8px 20px;
+    background-color: $link-color2;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    &.btn-s {
+        background-color: $link-color2;
+    }
+    &.btn-t {
+        background-color: $link-color3;
+    }
+}
+
+
 /* OPTIONS CSS ENDS */
 
-
 // Map Wrap Starts
-#mapWrap {
-	
-}
+#mapWrap {}
+
 
 /* Footer Starts */
+
 .footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	height: 30vh;
-	width: 100%;
-	background-image: url(https://github.com/rramaa/agent247/blob/UX-changes/src/client/images/footer.png?raw=true);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #fff;
-	background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+    width: 100%;
+    background-image: url(https://github.com/rramaa/agent247/blob/UX-changes/src/client/images/footer.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    background-size: cover;
 }
+
 .logo {
-	position: fixed;
-	bottom: 20vh;
-	left: 50%;
-	z-index: 2;
-	height: 70px;
-	width: 220px;
-	transform: translateX(-50%);
-	background-image: url(https://github.com/rramaa/agent247/blob/UX-changes/src/client/images/logo.png?raw=true);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #fff;
-	background-size: cover;
+    position: fixed;
+    bottom: 20vh;
+    left: 50%;
+    z-index: 2;
+    height: 70px;
+    width: 220px;
+    transform: translateX(-50%);
+    background-image: url(https://github.com/rramaa/agent247/blob/UX-changes/src/client/images/logo.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    background-size: cover;
 }
+
+
 /* Footer Ends */
 
 
 /*** Popup *****/
+
 .popup-container {
 	position: fixed;
 	top: 0;
@@ -471,52 +487,49 @@ body {
 
 
 /*  Intro Screen */
+
 .progress-wrap {
-	margin-top: 245px;
-	.txt {
-		color: $link-color2;
-		font-size: 16px;
-	}
+    margin-top: 245px;
+    .txt {
+        color: $link-color2;
+        font-size: 16px;
+    }
 }
 
 .progress-container {
-	width: 213px;
-	margin: 0 auto;
-
-	.bar {
-		width: 0%;
-		height: 14px;
-		color: #ffffff;
-		font-size: 12px;
-		text-align: center;
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-		background-color: $link-color2;
-		background-repeat: repeat-x;
-		box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-		transition: width 0.6s ease;
-	}
-	
-	.progress {
-		overflow: hidden;
-		height: 14px;
-		margin-bottom: 14px;
-		background-color: #fcfcfc;
-		background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
-		background-repeat: repeat-x;
-		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
-
-		&.active {
-			.bar {
-				animation: progress-bar-stripes 5s linear infinite;
-			}
-		}
-	}
-
-	.progress-striped {
-		.bar {
-			background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-			background-size: 40px 40px;
-		}
-	}
+    width: 213px;
+    margin: 0 auto;
+    .bar {
+        width: 0%;
+        height: 14px;
+        color: #ffffff;
+        font-size: 12px;
+        text-align: center;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: $link-color2;
+        background-repeat: repeat-x;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+        transition: width 0.6s ease;
+    }
+    .progress {
+        overflow: hidden;
+        height: 14px;
+        margin-bottom: 14px;
+        background-color: #fcfcfc;
+        background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
+        background-repeat: repeat-x;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        &.active {
+            .bar {
+                animation: progress-bar-stripes 5s linear infinite;
+            }
+        }
+    }
+    .progress-striped {
+        .bar {
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+            background-size: 40px 40px;
+        }
+    }
 }
