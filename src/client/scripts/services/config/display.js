@@ -65,13 +65,15 @@ const options = {
         title: '4 BHK Apartment',
         location: 'DLF Park Place',
         locality: 'Sector 54, Gurgaon',
-        price: '85,000'
+        price: '85,000',
+        id: 1
       }, {
         imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
         title: '4 BHK Apartment',
         location: 'DLF Park Place',
         locality: 'Sector 54, Gurgaon',
-        price: '85,000'
+        price: '85,000',
+        id: 2
       }],
       nextStep: STEPS["STEP_5"],
       id: 3

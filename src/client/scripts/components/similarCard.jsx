@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import autobind from 'react-auto-bind'
+import cs from 'classnames'
+
 class SimilarCard extends Component {
   render (){
     return (
-      <div className="card">
+      <div className={this.props.className}>
         <div className="propcard flexrow">
             <div className="img-wrap" style={{backgroundImage:'url('+this.props.imgurl+')'}}></div>
             <div className="prop-content">
@@ -45,8 +47,18 @@ class SimilarCardList extends Component{
         })
     }
     render() {
-        const current = this.props.data[this.state.current - 1]
-        return (<SimilarCard {...current} onClick={this.onClick} />)
+        return this.props.data.map((v, i) => {
+            const className = cs("card", {
+                'fadein': this.state.current - i === 1
+            })
+            return (
+            <SimilarCard
+                className={className}
+                {...v}
+                key={v.id}
+                onClick={this.onClick}
+            />)
+        })
     }
 }
 
