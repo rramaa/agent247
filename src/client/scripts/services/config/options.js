@@ -129,11 +129,6 @@ const options = {
       nextStep: STEPS["EXIT"]
     }
   ],
-  [STEPS["EXIT"]]: [
-    {
-      displayText: 'Thanks, bye!'
-    }
-  ],
   [STEPS["EXIT"]]: {
     type: 'exit'
   }
