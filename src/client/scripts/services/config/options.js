@@ -15,15 +15,10 @@ STEP 10 -> Thanks
 STEP 11 -> Kill Me PLEASE
 */
 
-const commonOptions = [{
-  displayText: "What were we talking about?",
-  nextStep: STEPS["STEP_1"]
-}]
-
 const options = {
   [STEPS["INTRO"]]: {
     type: 'intro',
-    nextStep: STEPS["STEP_1"]
+    nextStep: STEPS["STEP_10"]
   },
   [STEPS["STEP_1"]]: [
     {

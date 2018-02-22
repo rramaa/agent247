@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import {loadMap} from 'scripts/services/utilService'
 
 class MapBox extends Component{
 	constructor(props) {
@@ -22,16 +23,8 @@ class MapBox extends Component{
 			origin: '28.4439267, 77.10113164',
 			destination: '28.44226636, 77.07229253'
 		});
-		var mapScript = document.getElementById('map-script')
-		if (mapScript) {
-			return calculateAndDisplayRoute()
-		}
-		mapScript = document.createElement('script');
-		mapScript.async = true;
-		mapScript.defer = true;
-		mapScript.setAttribute('id', 'map-script')
-		mapScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCM65ffwx1b7S_WBQsd3mhgk8n4UDO1INM&callback=initMap'
-		document.getElementById('scriptArea').appendChild(mapScript);
+		loadMap()
+		return calculateAndDisplayRoute()
 	}
 
 	componentWillUnmount() {
