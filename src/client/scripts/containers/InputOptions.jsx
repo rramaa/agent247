@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import options from "scripts/services/config/options"
 import Button from 'scripts/components/Button'
 import Intro from 'scripts/components/Intro'
+import Exit from 'scripts/components/Exit'
 import autobind from 'react-auto-bind'
 import {changeStep} from 'scripts/actions/index'
 import cs from 'classnames'
@@ -34,6 +35,11 @@ class InputOptions extends Component {
       }, INTRO_TIMER);
       return (
         <Intro />
+      )
+    }
+    if(opt.type === 'exit') {
+      return (
+        <Exit />
       )
     }
     if(!this.props.showOptions) {

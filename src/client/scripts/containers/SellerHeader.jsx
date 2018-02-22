@@ -23,7 +23,7 @@ class SellerHeader extends Component {
     undoChangeStep(this.props.dispatch)
   }
   render() {
-    if (STEPS['INTRO'] === this.props.step) {
+    if (STEPS['INTRO'] === this.props.step || STEPS['EXIT'] === this.props.step) {
       return null
     }
     const cls = cs("sllr-head", {

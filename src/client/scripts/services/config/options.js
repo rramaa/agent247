@@ -1,24 +1,9 @@
 import STEPS from 'scripts/services/config/steps'
 
-/*
-STEP 0 -> Loading
-STEP 1 -> Intro
-STEP 2 -> Know more
-STEP 3 -> Budget
-STEP 4 -> Similar 
-STEP 5 -> Schedule
-STEP 6 -> Time Select
-STEP 7 -> Pickup Time
-STEP 8 -> MAP
-STEP 9 -> Pickup Location
-STEP 10 -> Thanks
-STEP 11 -> Kill Me PLEASE
-*/
-
 const options = {
     [STEPS["INTRO"]]: {
         type: 'intro',
-        nextStep: STEPS["STEP_9"]
+        nextStep: STEPS["STEP_1"]
     },
     [STEPS["STEP_1"]]: [{
         displayText: 'Know more about the property',
@@ -52,7 +37,12 @@ const options = {
       displayText: 'Some other time slot',
       action: {
         type: 'OPEN_MODAL',
-        payload: 'time-slot-vala'
+        payload: {
+          name: 'time-slot-vala',
+          modalData: {
+            nextStep: STEPS["STEP_8"]
+          }
+        }
       }
     }
   ],

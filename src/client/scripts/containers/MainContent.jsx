@@ -101,7 +101,7 @@ class MainContent extends Component {
   }
   render() {
     let allOptions = {...displayFields[this.props.step]}
-    if (allOptions.type === 'intro') {
+    if (allOptions.type === 'intro' || allOptions.type === 'exit') {
       return null
     }
     let content;
@@ -114,6 +114,9 @@ class MainContent extends Component {
           <div className={cls} key={v.id}>
             {v.type === 'property-card' &&
               <PropertyCard {...v.data} />
+            }
+            {v.type === 'dynamic' &&
+              v.displayFuntion(this.props)
             }
             {v.type === 'map' &&
               <MapBox />
@@ -148,7 +151,8 @@ class MainContent extends Component {
 const mapStateToProps = (state) => {
   return {
     step: state.step,
-    mute: state.mute
+    mute: state.mute,
+    timeData: state.timeData
   }
 }
 
