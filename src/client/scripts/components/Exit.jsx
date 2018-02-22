@@ -10,7 +10,7 @@ class Exit extends Component {
   render() {
     const cls = cs('button', this.props.className)
     return (
-      <div>
+      <div className="exit-page">
 
         <div className="logo"></div>
         <div className="footer"></div>
