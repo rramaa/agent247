@@ -10,7 +10,7 @@ import ImgSection from 'scripts/components/image'
 import PropertyCard from 'scripts/components/PropertyCard'
 import SimilarCard from 'scripts/components/similarCard'
 import LocationTypeahead from 'scripts/components/LocationTypeahead'
-import { changeStep } from 'scripts/actions/index'
+import { changeStep, openPropertyModal } from 'scripts/actions/index'
 
 const SPEECH_DELAY = 100
 const OPTIONS_DELAY = 150
@@ -90,6 +90,9 @@ class MainContent extends Component {
     }
     return opt
   }
+  openPropertyDetail(data) {
+    openPropertyModal(this.props.dispatch, data)
+  }
   changeStep(step) {
     changeStep(this.props.dispatch, step, this.props.step)
   }
@@ -116,7 +119,12 @@ class MainContent extends Component {
               <MapBox />
             }
             {v.type === 'similar' && 
-              <SimilarCard data={v.data} nextStep={v.nextStep} changeStep={this.changeStep} />
+              <SimilarCard
+                data={v.data}
+                onClick={this.openPropertyDetail}
+                nextStep={v.nextStep}
+                changeStep={this.changeStep}
+              />
             }
             {v.type === 'image' &&
               <ImgSection {...v.data} />

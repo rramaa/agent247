@@ -3,9 +3,16 @@ import autobind from 'react-auto-bind'
 import cs from 'classnames'
 
 class SimilarCard extends Component {
+    constructor(props) {
+        super(props)
+        autobind(this)
+    }
+  onPropertyClick(e) {
+      this.props.onPropertyClick(this.props)
+  }
   render (){
     return (
-        <div className={this.props.className}>
+        <div onClick={this.onPropertyClick} className={this.props.className}>
             <div className="ta-c otp-title">Property Option {this.props.count}</div>
             <div className="img-wrap" style={{backgroundImage:'url('+this.props.imgurl+')'}}></div>
             <div className="prop-content">
@@ -30,7 +37,8 @@ class SimilarCardList extends Component{
         }
         autobind(this)
     }
-    onClick() {
+    onClick(e) {
+        e.stopPropagation()
         this.setState((prevState) => {
             let next
             if (this.props.data.length === prevState.current) {
@@ -57,6 +65,7 @@ class SimilarCardList extends Component{
                 {...v}
                 key={v.id}
                 onClick={this.onClick}
+                onPropertyClick={this.props.onClick}
                 count={i+1}
             />)
         })

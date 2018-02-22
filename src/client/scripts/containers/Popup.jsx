@@ -15,7 +15,7 @@ class Popup extends Component {
     })
   }
   render(){
-    const { modal } = this.props
+    const { modal, modalData } = this.props
     let Comp;
     if(!modal) {
       return null
@@ -30,7 +30,7 @@ class Popup extends Component {
           <div className="closeit" onClick={this.closePopup}>
             <i class="fa fa-close"></i>
           </div>
-          <Comp />
+          <Comp {...modalData}/>
         </div>
       </div>
     )
@@ -39,7 +39,8 @@ class Popup extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    modal: state.modal
+    modal: state.modal,
+    modalData: state.modalData
   }
 }
 
