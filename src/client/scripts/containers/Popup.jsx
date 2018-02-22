@@ -25,11 +25,13 @@ class Popup extends Component {
       Comp = PropertyDetail
     }
     return (
-      <div className='popup'>
-        <div onClick={this.closePopup}>
-          Close
+      <div className='popup-container'>
+        <div className="popup">
+          <div className="closeit" onClick={this.closePopup}>
+            <i class="fa fa-close"></i>
+          </div>
+          <Comp />
         </div>
-        <Comp />
       </div>
     )
   }
