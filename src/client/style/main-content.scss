@@ -53,6 +53,10 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+.fadein {
+	z-index: 2;
+	animation: fadein 2s;
+}
 
 // slide Up Animation
 @keyframes slideup {
@@ -145,8 +149,6 @@ body {
 		//background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 		background: linear-gradient(-45deg, #EE7752, #E73C7E, #6f1cff, #23A6D5, #23D5AB);
 		background-size: 400% 400%;
-		-webkit-animation: Gradient 5s ease infinite;
-		-moz-animation: Gradient 5s ease infinite;
 		animation: Gradient 5s ease infinite;
 	}
 
@@ -262,8 +264,10 @@ body {
 	
 }
 
-.with-options {
-
+.withoptions {
+	position: relative;
+	opacity: 0;
+	z-index: 1;
 }
 /* GENERIC CARD ENDS */
 
