@@ -17,7 +17,6 @@ class LocationTypeahead extends Component {
     return (
       <div id="mapWrap">
         <div className="pac-card" id="pac-card">
-            <div id="title"> Autocomplete search </div>
             <div id="pac-container">
               <input id="pac-input" type="text" placeholder="Enter a location" />
             </div>
