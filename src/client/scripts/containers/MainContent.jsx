@@ -92,6 +92,9 @@ class MainContent extends Component {
   changeStep(step) {
     changeStep(this.props.dispatch, step)
   }
+  locationSelected(place, step) {
+    this.changeStep(step)
+  }
   render() {
     let allOptions = {...displayFields[this.props.step]}
     if (allOptions.type === 'intro') {
@@ -115,7 +118,7 @@ class MainContent extends Component {
               <SimilarCard data={v.data} nextStep={v.nextStep} changeStep={this.changeStep} />
             }
             {v.type === 'location' &&
-              <LocationTypeahead />
+              <LocationTypeahead onLocationSelect={this.locationSelected} nextStep={v.nextStep} />
             }
             {!v.type &&
               v.displayText

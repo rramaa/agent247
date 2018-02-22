@@ -132,6 +132,7 @@ const options = {
   [STEPS["STEP_9"]]: {
     options: [{
       type: 'location',
+      nextStep: STEPS["STEP_10"],
       id: 1
     }]
   },
