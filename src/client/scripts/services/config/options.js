@@ -18,7 +18,7 @@ STEP 11 -> Kill Me PLEASE
 const options = {
   [STEPS["INTRO"]]: {
     type: 'intro',
-    nextStep: STEPS["STEP_10"]
+    nextStep: STEPS["STEP_10"] //8-10
   },
   [STEPS["STEP_1"]]: [
     {

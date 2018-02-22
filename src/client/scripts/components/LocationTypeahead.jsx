@@ -1,14 +1,27 @@
 import React, {Component} from 'react'
-import { loadMap } from 'scripts/services/utilService'
+import {startMapAutocomplete} from 'scripts/services/utilService'
 
 class LocationTypeahead extends Component {
   componentDidMount() {
-    loadMap()
+    startMapAutocomplete()
   }
   render() {
     return (
       <div id="mapWrap">
+        <div className="pac-card" id="pac-card">
+            <div id="title"> Autocomplete search </div>
+            <div id="pac-container">
+              <input id="pac-input" type="text" placeholder="Enter a location" />
+            </div>
+        </div>
+
         <div id="map" className="" style={{ width: 'calc(100% + 20px)', height: '200px', marginLeft: '-10px' }}></div>
+        
+        <div id="infowindow-content">
+          <span id="place-name" className="title"></span><br/>
+          <span id="place-address"></span>
+        </div>
+
         <div id="scriptArea"></div>
       </div>
     )
