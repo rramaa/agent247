@@ -100,7 +100,9 @@ class MainContent extends Component {
     let content;
       const opt = this.getRenderedOptions(allOptions.options)
       content = opt.map(v => {
-        const cls = cs(v.className, 'statement')
+        const cls = cs(v.className, 'statement', {
+          'withoptions': v.type === 'similar'
+        })
         return (
           <div className={cls} key={v.id}>
             {v.type === 'property-card' &&
