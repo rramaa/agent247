@@ -7,10 +7,10 @@ const options = {
   [STEPS["STEP_1"]]: {
     type: 'text',
     options: [{
-      displayText: 'Hi Mark, sorry I couldn’t pick your call.',
+      displayText: 'Hi Mark, sorry I couldn’t pick your call',
       id: 1
     }, {
-      displayText: 'I saw that you have shown interest for rent in DLF Park Place',
+        displayText: 'I saw that you have shown interest for rent in DLF Park Place',
       id: 2
     }, {
       type: 'property-card',
@@ -30,20 +30,20 @@ const options = {
   [STEPS["STEP_2"]]: {
     type: 'text',
     options: [{
-      displayText: 'This apartment is situated in one of the most sought after luxury societies in Gurgaon by DLF.',
+      displayText: 'This apartment is situated in one of the most sought after luxury societies in the city by DLF',
       id: 1
     }, {
-      displayText: 'It is a meticulously designed 4BHK-Apartment with cut edge innovative interiors and facilities.',
+        displayText: 'It is a meticulously designed 4BHK apartment with innovative interiors and facilities',
       id: 2
     }, {
-      displayText: 'Located off just 200 meters from Golf course road, provides great connectivity.',
+        displayText: 'Located just 200 meters off from Golf course road, it provides great connectivity. Sounds interesting?',
       id: 3
     }]
   },
   [STEPS["STEP_3"]]: {
     type: 'text',
     options: [{
-      displayText: 'Sure, I can look that up.',
+      displayText: 'Sure, I can look that up',
       id: 1
     },{
       displayText: 'Is your budget of 90K a bit flexible on the higher side?',
@@ -84,10 +84,10 @@ const options = {
   [STEPS["STEP_5"]]: {
     type: 'text',
     options: [{
-      displayText: 'Thank you.',
+      displayText: 'Thank you',
       id: 1
     },{
-      displayText: 'Would you like to schedule a visit to these properties?',
+      displayText: 'Would you also like to schedule a visit to these properties?',
       id: 2
     },{
       type: 'image',
@@ -101,40 +101,40 @@ const options = {
   [STEPS["STEP_6"]]: {
     type: 'text',
     options: [{
-      displayText: 'Cool.',
+      displayText: 'Great!',
       id: 1
     },{
-      displayText: 'I am free this saturday afternoon.',
+      displayText: 'I am free this saturday afternoon',
       id: 2
     },{
-      displayText: 'Which one suits you better?',
+      displayText: 'Tell me when you are free?',
       id: 3
     }]
   },
   [STEPS["STEP_7"]]: {
     type: 'text',
     options: [{
-      displayText: 'Thanks, I have created a property schedule for you below.',
+      displayText: 'Thanks, I have created a personalized property schedule for you',
       id: 1
     }, {
       type: 'map',
       id: 4,
       variableDelay: 5000
     }, {
-      displayText: 'It should take around 2 hours for the tour.',
+      displayText: 'It should take around 2 hours for the tour',
       id: 2
     }, {
-      displayText: 'Please confirm if it sounds good?',
+      displayText: 'Looks alright?',
       id: 3
     }]
   },
   [STEPS["STEP_8"]]: {
     type: 'text',
     options: [{
-      displayText: 'We also provide a complimentary pick up service from your location.',
+      displayText: 'Thanks. We also provide a complimentary pick up service from your current residence',
       id: 1
     }, {
-      displayText: 'If you like, you can tell me pick-up point',
+      displayText: 'If you want to subscribe, tell me pick up location?',
       id: 2
     }]
   },
@@ -149,7 +149,7 @@ const options = {
     type: 'text',
     options: [{
       type: 'dynamic',
-      displayFuntion: function({timeData: {day="Saturday", time=""} = {}}) {
+      displayFuntion: function({timeData: {day="Saturday", time="afternoon"} = {}}) {
         return `Thanks, the car pick up will reach this ${day} ${time}`
       },
       id: 1
@@ -164,7 +164,7 @@ const options = {
   [STEPS["STEP_11"]]: {
     type: 'text',
     options: [{
-      displayText: 'DLF Park Place, located in Sector 54, offers apartments with the price being on request.',
+      displayText: 'DLF Park Place, located in Sector 54, offers apartments with the price being on request',
       id: 1
     }, {
       type: 'image',
@@ -173,17 +173,17 @@ const options = {
         class2: 'hide'
       }
     }, {
-        displayText: 'This area is the leading financial and industrial centre of the city.',
+        displayText: 'This area is the leading financial and industrial centre of the city',
       id: 2
     }, {
-        displayText: 'It offers facilities like Gymnasium, swimming pool, childrens play area, club house, and many other luxury amenities.',
+        displayText: 'It offers facilities like Gymnasium, swimming pool, childrens play area, club house, and many other luxury amenities',
       id: 2
       }]
   },
   [STEPS["STEP_12"]]: {
     type: 'text',
     options: [{
-      displayText: 'Certainly you can.',
+      displayText: 'Ofcourse',
       id: 1
     }, {
         displayText: 'I can also show you some similar properties nearby if you like',
@@ -196,13 +196,13 @@ const options = {
       displayText: 'No worries, I have noted down your interest',
       id: 1
     }, {
-      displayText: 'If you have any further queries, you can reach out to me on my cell phone.',
+      displayText: 'If you have any further queries, you can reach out to me on my cell phone',
       id: 2
     }, {
       displayText: 'It was great talking to you Mark',
       id: 3
     }, {
-        displayText: 'Looking forward!',
+      displayText: 'Looking forward!',
       id: 4
     }]
   },
@@ -210,12 +210,12 @@ const options = {
     type: 'text',
     options: [{
       type: 'dynamic',
-      displayFuntion: function ({ timeData: { day = "Saturday", time = "" } = {}}) {
+      displayFuntion: function ({ timeData: { day = "Saturday", time = "afternoon" } = {}}) {
         return `Thanks, the car pick up will reach this ${day} ${time}`
       },
       id: 1
     }, {
-      displayText: 'It was great talking to you Mark.',
+      displayText: 'It was great talking to you Mark',
       id: 2
     }, {
       displayText: 'Looking forward!',

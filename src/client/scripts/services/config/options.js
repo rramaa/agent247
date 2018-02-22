@@ -33,6 +33,12 @@ const options = {
     [STEPS["STEP_5"]]: [{
         displayText: 'Yes definitely',
         nextStep: STEPS["STEP_6"]
+    }
+  ],
+  [STEPS["STEP_6"]]: [
+    {
+      displayText: 'Yes definitely',
+      nextStep: STEPS["STEP_8"]
     }, {
       displayText: 'Some other time slot',
       action: {
@@ -44,18 +50,6 @@ const options = {
           }
         }
       }
-    }
-  ],
-  [STEPS["STEP_7"]]: [
-    {
-      displayText: 'Yes definitely',
-      nextStep: STEPS["STEP_8"]
-    }, {
-        displayText: 'Some other time slot',
-        action: {
-            type: 'OPEN_MODAL',
-            payload: 'time-slot-vala'
-        }
     }],
     [STEPS["STEP_7"]]: [{
         displayText: 'Yes definitely',
