@@ -21,7 +21,7 @@ class InputOptions extends Component {
   }
   onClick(data) {
     if(data.nextStep){
-      changeStep(this.props.dispatch, data.nextStep)
+      changeStep(this.props.dispatch, data.nextStep, this.props.step)
     } else if(data.action){
       this.props.dispatch(data.action)
     }
@@ -30,7 +30,7 @@ class InputOptions extends Component {
     let opt = options[this.props.step]
     if (opt.type === 'intro') {
       setTimeout(() => {
-        changeStep(this.props.dispatch, opt.nextStep)
+        changeStep(this.props.dispatch, opt.nextStep, this.props.step)
       }, INTRO_TIMER);
       return (
         <Intro />

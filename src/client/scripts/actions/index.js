@@ -1,7 +1,7 @@
 let stepStack = [];
 
-export function changeStep(dispatch, step) {
-	stepStack.push(step);
+export function changeStep(dispatch, step, currentStep) {
+	stepStack.push(currentStep);
 	dispatch({
 		type: 'CHANGE_STEP',
 		payload: step
@@ -15,6 +15,7 @@ export function undoChangeStep(dispatch){
 			type: 'CHANGE_STEP',
 			payload: lastStep
 		});
-	}
-	
+	}	
 }
+
+export {stepStack}

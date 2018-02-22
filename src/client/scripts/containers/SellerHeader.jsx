@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import autobind from 'react-auto-bind'
 import cs from 'classnames'
 import STEPS from 'scripts/services/config/steps'
-import {undoChangeStep} from 'scripts/actions/index'
+import { undoChangeStep, stepStack} from 'scripts/actions/index'
 
 function toggleVolume(dispatch) {
   dispatch({
@@ -35,8 +35,10 @@ class SellerHeader extends Component {
     })
     return (
         <div className="sllr-info-wrap">
-          <div className={cls} onClick={this.goBack}>
-            <i className="fa fa-arrow-left"></i>
+          <div className={cls}>
+            {stepStack.length >= 1 &&
+              <i className="fa fa-arrow-left" onClick={this.goBack}></i>
+            }
             <i
               className={volumeCls}
               onClick={this.toggleVolume}
