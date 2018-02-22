@@ -5,20 +5,21 @@ import cs from 'classnames'
 class SimilarCard extends Component {
   render (){
     return (
-      <div className={this.props.className}>
-        <div className="propcard flexrow">
-            <div className="img-wrap" style={{backgroundImage:'url('+this.props.imgurl+')'}}></div>
-            <div className="prop-content">
-                <div><span className="title">{this.props.title}</span> in {this.props.location}</div>
-                <div className="ltxt">{this.props.locality}</div>
-                <div className="price">&#8377; {this.props.price}</div>
+        <div className={this.props.className}>
+            <div className="ta-c otp-title">Property Option {this.props.count}</div>
+            <div className="propcard flexrow">
+                <div className="img-wrap" style={{backgroundImage:'url('+this.props.imgurl+')'}}></div>
+                <div className="prop-content">
+                    <div><span className="title">{this.props.title}</span> in {this.props.location}</div>
+                    <div className="ltxt">{this.props.locality}</div>
+                    <div className="price">&#8377; {this.props.price}</div>
+                </div>
+            </div>
+            <div className="btn-wrap flexrow">
+                <span className="btn"><i className="fa fa-thumbs-down"></i> Nopes</span>
+                <span className="btn" onClick={this.props.onClick}><i className="fa fa-heart-o"></i> Like</span>
             </div>
         </div>
-        <div className="btn-wrap flexrow">
-            <span className="btn"><i className="fa fa-thumbs-down"></i> Nopes</span>
-            <span className="btn" onClick={this.props.onClick}><i className="fa fa-heart-o"></i> Like</span>
-        </div>
-    </div>
     )
   }
 }
@@ -48,8 +49,9 @@ class SimilarCardList extends Component{
     }
     render() {
         return this.props.data.map((v, i) => {
-            const className = cs("card withoptions", {
-                'fadein': this.state.current - i === 1
+            const isVisible = this.state.current - i === 1
+            const className = cs("card", {
+                'fadein': isVisible
             })
             return (
             <SimilarCard
@@ -57,6 +59,7 @@ class SimilarCardList extends Component{
                 {...v}
                 key={v.id}
                 onClick={this.onClick}
+                count={i+1}
             />)
         })
     }
