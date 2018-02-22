@@ -87,6 +87,13 @@ const options = {
     },{
       displayText: 'Would you like to schedule a visit to these properties?',
       id: 2
+    },{
+      type: 'image',
+      data: {
+        class1: 'car-gif',
+        class2: 'car'
+      },
+      id: 3
     }]
   },
   [STEPS["STEP_6"]]: {

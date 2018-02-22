@@ -94,7 +94,19 @@ body {
 	60% {
 	  transform: translateY(-4px);
 	}
-  }
+}
+
+// move car animation
+@keyframes movecar {
+	0% {
+		-webkit-transform: translateX(5px);
+		transform: translateX(5px);
+	}
+	100% {
+		-webkit-transform: translateX(390px);
+		transform: translateX(390px);
+	}
+}
 
 .body-container {
 
@@ -204,6 +216,32 @@ body {
 	}
 }
 /* SELLER STATEMENTS ENDS */
+
+
+/** Car gif **/
+.car-gif {
+	position: relative;
+    width: 100%;
+	height: 75px;
+	background-image: url(//d1c42d2bmccy49.cloudfront.net/images/bg-req-sitevisit.2d2aae26.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+	background-color: #fff;
+	
+	.car {
+		position: absolute;
+		left: 5px;
+		bottom: 0;
+		width: 40px;
+		height: 20px;
+		background-image: url(//d1c42d2bmccy49.cloudfront.net/images/car.98ff3bab.png);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: contain;
+		animation: movecar 5s ease-in-out 0s infinite none running;
+	}
+}
 
 
 /* GENERIC CARD STARTS */
