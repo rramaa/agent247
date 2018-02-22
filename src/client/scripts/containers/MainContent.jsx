@@ -80,8 +80,14 @@ class MainContent extends Component {
     }
     const lastElem = opt[opt.length - 1]
     lastElem.className = cs(lastElem.className, 'current')
-    if(!lastElem.type && !mute){
-      const speech = talkToMe(lastElem.displayText)
+    let force = false
+    let text
+    if(lastElem.type === 'dynamic') {
+      text = lastElem.displayFuntion(this.props)
+      force = true
+    }
+    if(!lastElem.type && !mute || force){
+      const speech = talkToMe(lastElem.displayText || text)
       speech.onend = this.onSpeechEnd.bind(this, lastElem.variableDelay)
       changeSpeakingState(this.props.dispatch, true)
       speechSynthesis.speak(speech)
