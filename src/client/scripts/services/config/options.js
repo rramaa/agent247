@@ -22,7 +22,7 @@ const options = {
   },
   [STEPS["STEP_1"]]: [
     {
-      displayText: 'Know more on the property.',
+      displayText: 'Know more about the property.',
       nextStep: STEPS["STEP_2"]
     },{
       displayText: 'Know more about DLF Park Place',
@@ -65,7 +65,7 @@ const options = {
       displayText: 'Saturday afternoon',
       nextStep: STEPS["STEP_8"]
     }, {
-      displayText: 'Some other time.',
+      displayText: 'Some other time slot',
       action: "OPEN_TIME_SLOT"
     }
   ],

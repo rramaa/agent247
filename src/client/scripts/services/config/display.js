@@ -15,11 +15,11 @@ const options = {
     }, {
       type: 'property-card',
       data: {
-        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
+        imgurl: 'https://content.makaan.com/16/3566057/274/18812257.jpeg?width=120&height=90',
         title: '4 BHK Apartment',
         location: 'DLF Park Place',
         locality: 'Sector 54, Gurgaon',
-        price: '85,000'
+        price: '90,000'
       },
       id: 3
     }, {
@@ -46,14 +46,14 @@ const options = {
       displayText: 'Sure, I can look that up.',
       id: 1
     },{
-      displayText: 'Is your budget of 85K a bit flexible on the higher side?',
+      displayText: 'Is your budget of 90K a bit flexible on the higher side?',
       id: 2
     }]
   },
   [STEPS["STEP_4"]]: {
     type: 'text',
     options: [{
-      displayText: 'There are 2 more properties near buy that you can check out',
+      displayText: 'There are 2 more properties nearby that you can check out',
       id: 1
     },{
       displayText: 'Tell me which ones you like',
@@ -61,18 +61,18 @@ const options = {
     }, {
       type: 'similar',
       data: [{
-        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
-        title: '4 BHK Apartment',
-        location: 'DLF Park Place',
-        locality: 'Sector 54, Gurgaon',
-        price: '85,000',
+        imgurl: 'https://content.makaan.com/16/9284168/274/19512364.jpeg?width=265&height=115',
+        title: '5 BHK Apartment',
+        location: 'Builder Project',
+        locality: 'Sector 28, Gurgaon',
+        price: '80,000',
         id: 1
       }, {
-        imgurl: 'https://content.makaan.com/16/8414681/274/19988787.jpeg?width=90&height=90',
-        title: '3 BHK Studio Apartment',
-        location: 'DLF Ultima',
-        locality: 'Sector 81, Gurgaon',
-        price: '1,85,000',
+        imgurl: 'https://content.makaan.com/16/6965910/274/9464059.jpeg?width=265&height=115',
+        title: '4 BHK Apartment',
+        location: 'DLF Belaire',
+        locality: 'Sector 54, Gurgaon',
+        price: '95,000',
         id: 2
       }],
       nextStep: STEPS["STEP_5"],
@@ -95,7 +95,7 @@ const options = {
       displayText: 'Cool.',
       id: 1
     },{
-      displayText: 'I am free this saturday afternoon and sunday afternoon.',
+      displayText: 'I am free this saturday afternoon.',
       id: 2
     },{
       displayText: 'Which one suits you better?',
@@ -146,7 +146,7 @@ const options = {
       id: 2
     }, {
       displayText: 'Looking forward!',
-      id: 2
+      id: 3
     }]
   },
   [STEPS["STEP_11"]]: {
@@ -204,6 +204,5 @@ const options = {
       id: 3
     }]
   }
-}
 
 export default options
