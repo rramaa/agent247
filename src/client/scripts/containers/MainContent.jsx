@@ -9,6 +9,7 @@ import MapBox from 'scripts/components/MapBox'
 import PropertyCard from 'scripts/components/PropertyCard'
 import SimilarCard from 'scripts/components/similarCard'
 import LocationTypeahead from 'scripts/components/LocationTypeahead'
+import { changeStep } from 'scripts/actions/index'
 
 const SPEECH_DELAY = 100
 const OPTIONS_DELAY = 150
@@ -90,6 +91,9 @@ class MainContent extends Component {
     }
     return opt
   }
+  changeStep(step) {
+    changeStep(this.props.dispatch, step)
+  }
   render() {
     let allOptions = {...displayFields[this.props.step]}
     if (allOptions.type === 'intro') {
@@ -108,7 +112,7 @@ class MainContent extends Component {
               <MapBox />
             }
             {v.type === 'similar' && 
-              <SimilarCard data={v.data} />
+              <SimilarCard data={v.data} nextStep={v.nextStep} changeStep={this.changeStep} />
             }
             {v.type === 'location' &&
               <LocationTypeahead />

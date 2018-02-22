@@ -31,7 +31,13 @@ class SimilarCardList extends Component{
     }
     onClick() {
         this.setState((prevState) => {
-            const next = this.props.data.length === prevState.current ? this.props.data.length : prevState.current + 1
+            let next
+            if (this.props.data.length === prevState.current) {
+                this.props.changeStep(this.props.nextStep)
+                next = this.props.data.length
+            } else {
+                next = prevState.current + 1
+            }
             return {
                 ...prevState,
                 current: next

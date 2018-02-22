@@ -73,6 +73,7 @@ const options = {
         locality: 'Sector 54, Gurgaon',
         price: '85,000'
       }],
+      nextStep: STEPS["STEP_5"],
       id: 3
     }]
   },

@@ -18,7 +18,7 @@ STEP 11 -> Kill Me PLEASE
 const options = {
   [STEPS["INTRO"]]: {
     type: 'intro',
-    nextStep: STEPS["STEP_10"]
+    nextStep: STEPS["STEP_4"]
   },
   [STEPS["STEP_1"]]: [
     {
@@ -48,14 +48,7 @@ const options = {
       displayText: 'No, that is my upper limit'
     }
   ],
-  [STEPS["STEP_4"]]: [
-    {
-      displayText: 'Pikachu, I choose you.',
-      nextStep: STEPS["STEP_5"]
-    }, {
-      displayText: 'NO.'
-    }
-  ],
+  [STEPS["STEP_4"]]: [],
   [STEPS["STEP_5"]]: [
     {
       displayText: 'Yes definitely',

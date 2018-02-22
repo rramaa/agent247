@@ -4,15 +4,9 @@ import options from "scripts/services/config/options"
 import Button from 'scripts/components/Button'
 import Intro from 'scripts/components/Intro'
 import autobind from 'react-auto-bind'
+import {changeStep} from 'scripts/actions/index'
 
 const INTRO_TIMER = 5000
-
-function changeStep(dispatch, step) {
-  dispatch({
-    type: 'CHANGE_STEP',
-    payload: step
-  })
-}
 
 class InputOptions extends Component {
   constructor(props) {
