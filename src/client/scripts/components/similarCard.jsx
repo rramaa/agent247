@@ -16,7 +16,7 @@ class SimilarCard extends Component {
                 </div>
             </div>
             <div className="btn-wrap flexrow">
-                <span className="btn"><i className="fa fa-thumbs-down"></i> Nopes</span>
+                <span className="btn" onClick={this.props.onClick}><i className="fa fa-thumbs-down"></i> Nopes</span>
                 <span className="btn" onClick={this.props.onClick}><i className="fa fa-heart-o"></i> Like</span>
             </div>
         </div>
