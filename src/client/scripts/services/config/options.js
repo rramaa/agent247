@@ -30,14 +30,18 @@ const options = {
         nextStep: STEPS["STEP_4"]
     }],
     [STEPS["STEP_4"]]: [],
-    [STEPS["STEP_5"]]: [{
+    [STEPS["STEP_5"]]: [
+    {
         displayText: 'Yes definitely',
         nextStep: STEPS["STEP_6"]
+    }, {
+        displayText: 'Umm..not sure yet',
+        nextStep: STEPS["STEP_13"]
     }
   ],
   [STEPS["STEP_6"]]: [
     {
-      displayText: 'Yes definitely',
+      displayText: 'Saturday afternoon',
       nextStep: STEPS["STEP_8"]
     }, {
       displayText: 'Some other time slot',
