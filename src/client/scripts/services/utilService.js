@@ -115,11 +115,11 @@ export function calculateAndDisplayRoute(origin , destination, waypoints) {
 	  	});
 	  	},
 	  	looper = function (){
-	  		looperPromise().then(()=>{setTimeout(looper,1000)});
+	  		looperPromise().then(()=>{setTimeout(looper,2000)});
 	  	};
 
 	  	directionsDisplay.setMap(map);
-		setTimeout(looper,1000);
+		setTimeout(looper,2000);
 }
 
 export default function noop() {}
