@@ -121,3 +121,5 @@ export function calculateAndDisplayRoute(origin , destination, waypoints) {
 	  	directionsDisplay.setMap(map);
 		setTimeout(looper,1000);
 }
+
+export default function noop() {}
