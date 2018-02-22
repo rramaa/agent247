@@ -61,14 +61,14 @@ const options = {
     }, {
       type: 'similar',
       data: [{
-        imgurl: 'https://content.makaan.com/16/9284168/274/19512364.jpeg?width=265&height=115',
+        imgurl: 'https://content.makaan.com/16/9284168/274/19512354.jpeg?width=1024&height=576',
         title: '5 BHK Apartment',
         location: 'Builder Project',
         locality: 'Sector 28, Gurgaon',
         price: '80,000',
         id: 1
       }, {
-        imgurl: 'https://content.makaan.com/16/6965910/274/9464059.jpeg?width=265&height=115',
+        imgurl: 'https://content.makaan.com/16/6965910/274/9464059.jpeg?width=1024&height=576',
         title: '4 BHK Apartment',
         location: 'DLF Belaire',
         locality: 'Sector 54, Gurgaon',
