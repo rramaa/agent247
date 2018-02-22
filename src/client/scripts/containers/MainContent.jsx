@@ -8,6 +8,7 @@ import {talkToMe} from 'scripts/services/utilService'
 import MapBox from 'scripts/components/MapBox'
 import PropertyCard from 'scripts/components/PropertyCard'
 import SimilarCard from 'scripts/components/similarCard'
+import LocationTypeahead from 'scripts/components/LocationTypeahead'
 
 const SPEECH_DELAY = 100
 const OPTIONS_DELAY = 150
@@ -108,6 +109,9 @@ class MainContent extends Component {
             }
             {v.type === 'similar' && 
               <SimilarCard data={v.data} />
+            }
+            {v.type === 'location' &&
+              <LocationTypeahead />
             }
             {!v.type &&
               v.displayText

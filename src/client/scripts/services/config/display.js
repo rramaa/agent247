@@ -134,9 +134,8 @@ const options = {
     }]
   },
   [STEPS["STEP_10"]]: {
-    type: 'text',
     options: [{
-      displayText: 'Location input',
+      type: 'location',
       id: 1
     }]
   },
