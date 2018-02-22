@@ -11,7 +11,7 @@ import Popup from 'scripts/containers/Popup'
 
 let store = configureStore()
 
-class ToDo extends Component {
+class MyApp extends Component {
     constructor(props) {
         super(props)
     }
@@ -30,7 +30,7 @@ class ToDo extends Component {
 
 const App = (
     <Provider store={store}>
-        <ToDo />
+        <MyApp />
     </Provider>
 )
 export default App
