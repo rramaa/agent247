@@ -18,7 +18,7 @@ STEP 11 -> Kill Me PLEASE
 const options = {
     [STEPS["INTRO"]]: {
         type: 'intro',
-        nextStep: STEPS["STEP_6"]
+        nextStep: STEPS["STEP_7"]
     },
     [STEPS["STEP_1"]]: [{
         displayText: 'Know more about the property',
