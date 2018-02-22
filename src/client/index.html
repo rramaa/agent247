@@ -8,8 +8,13 @@
         window.myDirectionsService = new google.maps.DirectionsService;
         window.myDirectionsDisplay = new google.maps.DirectionsRenderer;
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 6,
-          center: {lat: 41.85, lng: -87.65}
+          zoom: 15,
+          scrollwheel: false,
+          navigationControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          draggable: false,
+          center: {lat: 28.4439267, lng: 77.10113164}
         });
         myDirectionsDisplay.setMap(map);
       	calculateAndDisplayRoute();
@@ -59,10 +64,10 @@
       		},
 
       		looper = function (){
-      			looperPromise().then(()=>{setTimeout(looper,1000)});
+      			looperPromise().then(()=>{setTimeout(looper,2000)});
       		};
 
-      		looper();
+      		setTimeout(looper,1000);
       }
     </script>
     <title>React App</title>
