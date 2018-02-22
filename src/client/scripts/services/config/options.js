@@ -68,7 +68,12 @@ const options = {
       displayText: 'Some other time slot',
       action: {
         type: 'OPEN_MODAL',
-        payload: 'time-slot-vala'
+        payload: {
+          name: 'time-slot-vala',
+          modalData: {
+            nextStep: STEPS["STEP_8"]
+          }
+        }
       }
     }
   ],
@@ -128,7 +133,10 @@ const options = {
     {
       displayText: 'Thanks, bye!'
     }
-  ]
+  ],
+  [STEPS["EXIT"]]: {
+    type: 'exit'
+  }
 }
 
 export default options

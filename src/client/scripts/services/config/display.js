@@ -148,7 +148,10 @@ const options = {
   [STEPS["STEP_10"]]: {
     type: 'text',
     options: [{
-      displayText: 'Thanks, the car pick up will reach this [day] [morning/afternoon/evening]',
+      type: 'dynamic',
+      displayFuntion: function({timeData: {day="Saturday", time=""} = {}}) {
+        return `Thanks, the car pick up will reach this ${day} ${time}`
+      },
       id: 1
     }, {
       displayText: 'It was great talking to you Mark.',
@@ -206,7 +209,10 @@ const options = {
   [STEPS["STEP_14"]]: {
     type: 'text',
     options: [{
-      displayText: 'Certainly, let’s catchup at [day] [morning/afternoon/evening]',
+      type: 'dynamic',
+      displayFuntion: function ({ timeData: { day = "Saturday", time = "" } = {}}) {
+        return `Thanks, the car pick up will reach this ${day} ${time}`
+      },
       id: 1
     }, {
       displayText: 'It was great talking to you Mark.',
@@ -215,6 +221,9 @@ const options = {
       displayText: 'Looking forward!',
       id: 3
     }]
+  },
+  [STEPS["EXIT"]]: {
+    type: 'exit'
   }
 }
 export default options

@@ -14,6 +14,12 @@ class Popup extends Component {
       type: 'CLOSE_MODAL'
     })
   }
+  timeSelected(data) {
+    this.props.dispatch({
+      type: 'TIME_SLOT_SELECTED',
+      payload: data
+    })
+  }
   render(){
     const { modal, modalData } = this.props
     let Comp;
@@ -28,9 +34,9 @@ class Popup extends Component {
       <div className='popup-container'>
         <div className="popup">
           <div className="closeit" onClick={this.closePopup}>
-            <i class="fa fa-close"></i>
+            <i className="fa fa-close"></i>
           </div>
-          <Comp {...modalData}/>
+          <Comp {...modalData} timeSelected={this.timeSelected}/>
         </div>
       </div>
     )

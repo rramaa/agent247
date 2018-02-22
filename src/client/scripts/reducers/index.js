@@ -46,7 +46,8 @@ export default function rootReducer(state={}, {type, payload}){
 		case 'OPEN_MODAL':
 			newState = {
 				...state,
-				modal: payload
+				modal: payload.name,
+				modalData: payload.modalData
 			}
 			break;
 		case 'CLOSE_MODAL':
@@ -61,6 +62,16 @@ export default function rootReducer(state={}, {type, payload}){
 				...state,
 				modal: 'property-detail',
 				modalData: payload
+			}
+			break;
+		case "TIME_SLOT_SELECTED":
+			newState = {
+				...state,
+				timeData: payload.time,
+				step: payload.nextStep,
+				showOptions: false,
+				modal: false,
+				modalData: null
 			}
 			break;
 		default:
