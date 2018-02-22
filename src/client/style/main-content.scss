@@ -26,6 +26,10 @@ body {
 	text-align: right;
 }
 
+.ltxt { /* light color text */
+	color: #999;
+}
+
 .hide {
 	display: none;
 }
@@ -269,10 +273,6 @@ body {
 		font-weight: 500;
 	}
 
-	.ltxt { /* light color text */
-		color: #999;
-	}
-
 	.price {
 		padding-top: 10px;
 		color: #333;
@@ -431,13 +431,43 @@ body {
 		position: absolute;
 		top: 0;
 		right: 0;
+		z-index: 10;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 30px;
 		height: 30px;
+		cursor: pointer;
 	}
 }
+
+/*** TIME SLOT POPUP STARTS ***/
+.timeslot-wrap {
+	.title {
+		padding: 15px 20px;
+		border-bottom: solid 1px #dcdcdc;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	.day-wrap {
+		padding-bottom: 20px;
+		.day {
+			padding: 10px;
+			font-size: 15px;
+			font-weight: 500;
+		}
+		.timeslot {
+			padding: 10px;
+			border-bottom: solid 1px #ececec;
+			color: #666;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+}
+/*** TIME SLOT POPUP ENDS ***/
 
 
 /*  Intro Screen */
