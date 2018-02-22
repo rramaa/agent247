@@ -25,10 +25,10 @@ export function startMapAutocomplete(cb){
 		var card = document.getElementById('pac-card');
 	    var input = document.getElementById('pac-input');
 	    var map = new window.GMAPS.Map(document.getElementById('map'), {
-          center: {lat: -33.8688, lng: 151.2195},
+          center: {lat: 28.4439267, lng: 77.10113164},
           zoom: 13
         });
-	    map.controls[window.GMAPS.ControlPosition.TOP_RIGHT].push(card);
+	    //map.controls[window.GMAPS.ControlPosition.TOP_RIGHT].push(card);
 
 	    var autocomplete = new window.GMAPS.places.Autocomplete(input);
 		autocomplete.bindTo('bounds', map);
@@ -53,13 +53,13 @@ export function startMapAutocomplete(cb){
           } else {
             map.setCenter(place.geometry.location);
           }
-          map.setZoom(17);
+          map.setZoom(16);
           marker.setPosition(place.geometry.location);
           marker.setVisible(true);
-					// Show Proceed button
-					if(cb) {
-						cb(place)
-					}
+			// Show Proceed button
+			if(cb) {
+				setTimeout(()=>{cb(place)}, 2000);
+			}
       	});
 }
 

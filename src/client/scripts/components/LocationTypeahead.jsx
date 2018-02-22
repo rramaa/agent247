@@ -23,7 +23,7 @@ class LocationTypeahead extends Component {
             </div>
         </div>
 
-        <div id="map" className="" style={{ width: 'calc(100% + 20px)', height: '200px', marginLeft: '-10px' }}></div>
+        <div id="map" className="" style={{ width: 'calc(100% + 20px)', height: '400px', marginLeft: '-10px' }}></div>
         
         <div id="infowindow-content">
           <span id="place-name" className="title"></span><br/>
