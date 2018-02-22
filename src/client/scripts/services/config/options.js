@@ -3,7 +3,7 @@ import STEPS from 'scripts/services/config/steps'
 const options = {
     [STEPS["INTRO"]]: {
         type: 'intro',
-        nextStep: STEPS["STEP_1"]
+        nextStep: STEPS["STEP_14"]
     },
     [STEPS["STEP_1"]]: [{
         displayText: 'Know more about the property',
@@ -46,7 +46,7 @@ const options = {
       }
     }
   ],
-  [STEPS["STEP_7"]]: [
+  [STEPS["STEP_6"]]: [
     {
       displayText: 'Yes definitely',
       nextStep: STEPS["STEP_8"]
@@ -95,9 +95,9 @@ const options = {
         displayText: 'Thanks, bye!',
         nextStep: STEPS["EXIT"]
     }],
-    [STEPS["EXIT"]]: [{
-        displayText: 'Thanks, bye!'
-    }]
+    [STEPS["EXIT"]]: {
+        type: 'exit'
+    }
 }
 
 export default options

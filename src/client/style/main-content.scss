@@ -436,6 +436,15 @@ body {
 }
 /* Footer Ends */
 
+/** Exit Page **/
+.exit-page {
+	width: 100vw;
+	height: 100vh;
+	.logo {
+		bottom: auto;
+		top: 40vh;
+	}
+}
 
 /*** Popup *****/
 .popup-container {
