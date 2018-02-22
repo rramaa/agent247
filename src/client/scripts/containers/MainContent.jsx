@@ -6,6 +6,7 @@ import autobind from 'react-auto-bind'
 import cs from 'classnames'
 import {talkToMe} from 'scripts/services/utilService'
 import MapBox from 'scripts/components/MapBox'
+import ImgSection from 'scripts/components/image'
 import PropertyCard from 'scripts/components/PropertyCard'
 import SimilarCard from 'scripts/components/similarCard'
 import LocationTypeahead from 'scripts/components/LocationTypeahead'
@@ -116,6 +117,9 @@ class MainContent extends Component {
             }
             {v.type === 'similar' && 
               <SimilarCard data={v.data} nextStep={v.nextStep} changeStep={this.changeStep} />
+            }
+            {v.type === 'image' &&
+              <ImgSection {...v.data} />
             }
             {v.type === 'location' &&
               <LocationTypeahead onLocationSelect={this.locationSelected} nextStep={v.nextStep} />
