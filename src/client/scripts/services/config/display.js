@@ -37,13 +37,14 @@ const options = {
       data: {
         class1: 'propimg',
         class2: 'hide'
-      }
-    }, {
-        displayText: 'It is a meticulously designed 4BHK apartment with innovative interiors and facilities',
+      },
       id: 2
     }, {
-        displayText: 'Located just 200 meters off from Golf course road, it provides great connectivity. Sounds interesting?',
+        displayText: 'It is a meticulously designed 4BHK apartment with innovative interiors and facilities',
       id: 3
+    }, {
+        displayText: 'Located just 200 meters off from Golf course road, it provides great connectivity. Sounds interesting?',
+      id: 4
     }]
   },
   [STEPS["STEP_3"]]: {
@@ -184,13 +185,14 @@ const options = {
       data: {
         class1: 'park-place',
         class2: 'hide'
-      }
+      },
+      id: 2
     }, {
         displayText: 'This area is the leading financial and industrial centre of the city',
-      id: 2
+      id: 3
     }, {
         displayText: 'It offers facilities like Gymnasium, swimming pool, childrens play area, club house, and many other luxury amenities',
-      id: 2
+      id: 4
       }]
   },
   [STEPS["STEP_12"]]: {
