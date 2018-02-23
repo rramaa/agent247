@@ -42,7 +42,7 @@ const options = {
   [STEPS["STEP_6"]]: [
     {
       displayText: 'Saturday afternoon',
-      nextStep: STEPS["STEP_8"]
+      nextStep: STEPS["STEP_7"]
     }, {
       displayText: 'Some other time slot',
       action: {
@@ -50,7 +50,7 @@ const options = {
         payload: {
           name: 'time-slot-vala',
           modalData: {
-            nextStep: STEPS["STEP_8"]
+            nextStep: STEPS["STEP_7"]
           }
         }
       }
